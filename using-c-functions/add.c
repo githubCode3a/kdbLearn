@@ -1,5 +1,5 @@
 // https://code.kx.com/q/interfaces/using-c-functions/
-#include"k.h"
+#include"k.h" // k.h in https://github.com/KxSystems/kdb/
 #ifdef __cplusplus
 extern "C"{
 #endif

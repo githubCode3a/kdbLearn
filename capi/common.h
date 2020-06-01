@@ -1,4 +1,5 @@
 // https://code.kx.com/q/wp/capi/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -9,7 +10,7 @@
 
 // /* common.h */
 
-I isRemoteErr(K x) {
+I isRemoteErr(K x) { // typedef int  I; // https://code.kx.com/q/wp/capi/
     if(!x) {
         fprintf(stderr, "Network error: %s\n", strerror(errno));
         return 1;

@@ -10,7 +10,7 @@
 #include "common.h"
 
 int main() {
-    I handle;
+    I handle;  // typedef int  I; // https://code.kx.com/q/wp/capi/
     I portnumber= 12345;
     S hostname= "localhost";
     S usernamePassword= "kdb:pass";

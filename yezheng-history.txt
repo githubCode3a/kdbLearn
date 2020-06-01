@@ -1,0 +1,48 @@
+clear && printf '\e[3J';grep -R --include="*.java" "khpu" .
+clear && printf '\e[3J'; mvn test
+
+git clone ssh://G18@cis455.cis.upenn.edu/git/cis455/G18/ ./G18
+mvn clean  compile exec:java -Dexec.mainClass="edu.upenn.cis455.frontend.XPathApp" -Dexec.args="dbyezheng"
+clear && printf '\e[3J'; mvn clean compile exec:java@StormLiteTestWordCount
+
+
+clear && printf '\e[3J'; mvn clean compile test
+
+clear && printf '\e[3J'; mvn clean compile exec:java@Master
+clear && printf '\e[3J'; mvn clean compile exec:java@Worker "-Dexec.args=127.0.0.1:8000 dbyezheng1 88"
+clear && printf '\e[3J'; mvn clean compile exec:java@Worker "-Dexec.args=127.0.0.1:8000 dbyezheng2 89"
+clear && printf '\e[3J'; mvn clean compile exec:java@TestMapReduce
+clear && printf '\e[3J'; mvn clean compile exec:java -Dexec.mainClass="edu.upenn.cis.stormlite.mapreduce.TestMapReduce"
+clear && printf '\e[3J'; mvn clean compile exec:java -Dexec.mainClass="edu.upenn.cis.stormlite.TestWordCountStreaming"
+
+sudo kill -9 'sudo lsof -t -i:8080';
+sudo kill -9 'sudo lsof -t -i:8083';
+
+
+
+
+
+
+clear && printf '\e[3J';grep -R --include="*.java" "\[PrintBolt\]" .
+
+
+
+git config --local --add core.sshCommand 'ssh -i ~/github/id_rsa'
+
+
+curl localhost:8080
+curl I --head localhost:8080
+
+ab -l -n 100 -c 10 "localhost:8081/upenn_.jpg"
+ab -l -n 100 -c 10 "localhost:8081/index_.html"
+
+
+# HW1MS2
+yezheng: I have not written filter!!
+
+#HW2MS2
+localhost:8080/create?name=yezheng
+
+
+
+ReduceBolt TODO: determine how many
