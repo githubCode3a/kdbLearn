@@ -1,6 +1,11 @@
-// The c.o header file is required for compilation.
 // https://code.kx.com/q/wp/capi/
 // gcc -DKXVER=3 -o alivecheck alivecheck.c c.o -lpthread
+//-----------------
+// The c.o header file is required for compilation.
+// https://code.kx.com/q/interfaces/c-client-for-q/
+// https://github.com/KxSystems/kdb/blob/master/l64/c.o
+
+
 /* Filename: alivecheck.c */
 #include "common.h"
 
