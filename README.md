@@ -24,6 +24,7 @@ Rapid  API
 \l /home/acer/github/kdbLearn/companylist
 
 symbols:("SS";enlist",")0:`:/home/acer/github/kdbLearn/companylist.csv
+`Symbol xkey `symbols
 getallsymbols:{select from symbols}
 f:{select from symbols}
 
@@ -44,11 +45,15 @@ x = q.f()
 #---------
 <!-- https://code.kx.com/q/learn/startingkdb/tables/ -->
 create an empty table
-quotes:([]sym:`symbol$();date:`date$();spot:`real$();open:`real$();close:`real$())
-`:/home/acer/github/kdbLearn/quotes dsave `quotes
-`:/home/acer/github/kdbLearn/quotes dsave `quotes
+quotes:([]date:`date$();sym:`symbol$();spot:`real$();open:`real$();close:`real$())
+`sym`date xkey `quotes
 
-`quotes upsert (`TURN;2017.12.01;2.04e;1.0709e;1.0709e)
+`:/home/acer/github/kdbLearn/companylist dsave `symbols`quotes
+`:/home/acer/github/kdbLearn/companylist dsave `symbols`quotes
+
+`quotes upsert (2017.12.01;`TURN;2.04e;1.0709e;1.0709e)
+`quotes insert (2017.12.01;`PIH;7.35e;0.0e;0.0e)
+
 
 TURN opened at 2.04 and closed at 1.9709
 
@@ -67,3 +72,10 @@ trades:([]date:`date$();sym:`symbol$(); price:`real$();size:`int$())
 
 
 `:/home/acer/github/kdbLearn/trades dsave `trades
+
+
+\l /home/acer/github/kdbLearn/init.q
+
+
+pyq.q("`sym`date xkey `quotes")
+pyq.q("`Symbol xkey `symbols")

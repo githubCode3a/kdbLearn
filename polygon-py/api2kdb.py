@@ -54,7 +54,10 @@ if __name__ == "__main__":
     
     # pyq.q.symbols.show()
     pyq.q("\l /home/acer/github/kdbLearn/companylist")
-    pyq.q("getallsymbols:{select Symbol from symbols}")
+    # pyq.q("`sym`date xkey `quotes")
+    # pyq.q("`Symbol xkey `symbols")
+    pyq.q("getallsymbols:{`Symbol xasc select Symbol from symbols}")
+    
     x = pyq.q.getallsymbols()
 
     
@@ -80,14 +83,14 @@ if __name__ == "__main__":
     print("=============")
     # Get first day of every month:
 
-    dateLst = pd.date_range(start, end, freq='MS').strftime('%Y-%m-%d').tolist()
+    dateLst = pd.date_range(start, end, freq='MS').strftime('%Y.%m.%d').tolist()
 
     print("dateLst", dateLst)
     i = 0
     for name in x:
         i+=1
         sym = str(name.Symbol)  
-        if i>>3:
+        if i>>2:
             break
         print(sym, type(name.Symbol))
             # name.show()
@@ -96,8 +99,15 @@ if __name__ == "__main__":
             # print(sym, type(sym))
             resp = myClient.query(sym, date_str)
             if resp is not None:
-                query = f"`quotes upsert (`{sym};{date_str};{resp.open}e;{resp.close}e;1.{resp.close}e)"
+                # `quotes upsert (`TURN;2017.12.01;2.04e;1.0709e;1.0709e)
+                # query = f"`quotes upsert (`[s:{sym};{date_str}]{resp.open}e;{resp.close}e;{resp.close}e)"
+                print("type(resp.close )", type(resp.close))
+                query = f"`quotes upsert (`{sym};{date_str};{resp.open}e;{resp.close}e;{resp.close}e)"
+                print(query)
+                pyq.q(query)
     pyq.q()
+    pyq.q("`symbol$() xkey `quotes")
+    pyq.q("`symbol$() xkey `symbols")
     pyq.q("`:/home/acer/github/kdbLearn/companylist dsave `symbols`quotes")
     # pyq.q("`:/home/acer/github/kdbLearn/companylist dsave `symbols")
     
