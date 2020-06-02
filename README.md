@@ -21,15 +21,16 @@ aGls_e4_gw0XgXU_XY64XFrrP88o_tcQ3qmYWY
 Rapid  API
 
 
-
+\l /home/acer/github/kdbLearn/companylist
 
 symbols:("SS";enlist",")0:`:/home/acer/github/kdbLearn/companylist.csv
 getallsymbols:{select from symbols}
 f:{select from symbols}
 
 
-
 `:/home/acer/github/kdbLearn/companylist dsave `symbols
+
+`:/home/acer/github/kdbLearn/companylist dsave `symbols`quotes
 
 
 ##yezheng: but not importing everything
@@ -38,3 +39,31 @@ x = q.f()
 
 
 `:/home/acer/github/kdbLearn/db1 dsave`sym xasc'`t`q --> create FOLDER db1
+
+
+#---------
+<!-- https://code.kx.com/q/learn/startingkdb/tables/ -->
+create an empty table
+quotes:([]sym:`symbol$();date:`date$();spot:`real$();open:`real$();close:`real$())
+`:/home/acer/github/kdbLearn/quotes dsave `quotes
+`:/home/acer/github/kdbLearn/quotes dsave `quotes
+
+`quotes upsert (`TURN;2017.12.01;2.04e;1.0709e;1.0709e)
+
+TURN opened at 2.04 and closed at 1.9709
+
+
+
+trades:([]date:`date$();time:`time$();sym:`symbol$(); price:`real$();size:`int$(); cond:`char$())
+
+
+`trades insert (2013.07.01;10:03:54.347;`IBM;20.83e;40000;"N")
+
+
+trades:([]date:`date$();sym:`symbol$(); price:`real$();size:`int$())
+
+
+`trades insert (2013.07.01;`IBM;20.83e;40000)
+
+
+`:/home/acer/github/kdbLearn/trades dsave `trades
