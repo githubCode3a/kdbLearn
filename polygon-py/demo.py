@@ -1,7 +1,9 @@
 # https://github.com/polygon-io/client-python
 import time
-
-
+import pandas as pd
+import pyq
+from datetime import date
+import q 
 from polygon import WebSocketClient, STOCKS_CLUSTER
 
 
@@ -21,4 +23,9 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    df = pd.read_csv("~/github/kdbLearn/companylist.csv")
+    
+    c=q.conn(host="127.0.0.1",port=12345)
+    print(c('1+1'))
+
+    # x = pyq.getallsymbols()

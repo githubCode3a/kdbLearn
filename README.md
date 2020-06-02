@@ -16,3 +16,15 @@ https://polygon.io/
 
 aGls_e4_gw0XgXU_XY64XFrrP88o_tcQ3qmYWY
 
+
+
+Rapid  API
+
+symbols:("SS";enlist",")0:`:/home/acer/github/kdbLearn/companylist.csv
+getallsymbols:{select from symbols}
+f:{select from symbols}
+
+
+##yezheng: but not importing everything
+x = q.getallsymbols()
+x = q.f()
