@@ -1,5 +1,5 @@
 # https://github.com/polygon-io/client-python
-import time
+import time,tqdm
 import pandas as pd
 import pyq
 from datetime import date
@@ -36,7 +36,7 @@ class key2client:
         resp = None
         try:
             resp = self.RESTclient.stocks_equities_daily_open_close(sym,time_str)
-            print(f"On: {resp.from_}\t{sym} opened at {resp.open} and closed at {resp.close}")
+            # print(f"On: {resp.from_}\t{sym} opened at {resp.open} and closed at {resp.close}")
         except:
             pass
         # time.sleep(2)
@@ -53,15 +53,25 @@ if __name__ == "__main__":
     # print(dir(q))
     
     # pyq.q.symbols.show()
-    pyq.q("\l /home/acer/github/kdbLearn/companylist")
+    # pyq.q("\l /home/acer/github/kdbLearn/companylist")
+    T0 = time.time()
+    pyq.q("symbols:(\"SSFSISS\";enlist\",\")0:`:/home/acer/github/kdbLearn/companylist.csv")
+
+
+    pyq.q("quotes:(\"DSEEE\";enlist\",\")0:`:/home/acer/github/kdbLearn/quotes.csv")
+
     # pyq.q("`sym`date xkey `quotes")
     # pyq.q("`Symbol xkey `symbols")
+
     pyq.q("getallsymbols:{`Symbol xasc select Symbol from symbols}")
-    
-    x = pyq.q.getallsymbols()
+    quotes = pyq.q("showquotes:{`show quotes}")
+    quotes.show()
 
     
-    x.show()
+    x = pyq.q.getallsymbols()
+    # x.show()
+    
+    
     # print("type(x)", type(x))
     # print(list(x))
 
@@ -77,21 +87,19 @@ if __name__ == "__main__":
     # period = pendulum.period(start, end)
     # period = pendulum.period(start, end)
     #-----------------
-    start = pd.to_datetime('December 1, 2017')
-    end = pd.to_datetime('June 1, 2018')
+    start = pd.to_datetime('December 1, 2019')
+    end = pd.to_datetime('December 31, 2019')
 
     print("=============")
     # Get first day of every month:
 
-    dateLst = pd.date_range(start, end, freq='MS').strftime('%Y.%m.%d').tolist()
+    dateLst = pd.date_range(start, end).strftime('%Y.%m.%d').tolist()#, freq='MS'
 
     print("dateLst", dateLst)
-    i = 0
-    for name in x:
-        i+=1
+    
+    for name_idx in tqdm.tqdm(range(len(x))):
+        name = x[name_idx]
         sym = str(name.Symbol)  
-        if i>>2:
-            break
         print(sym, type(name.Symbol))
             # name.show()
         
@@ -100,14 +108,18 @@ if __name__ == "__main__":
             resp = myClient.query(sym, date_str)
             if resp is not None:
                 # `quotes upsert (`TURN;2017.12.01;2.04e;1.0709e;1.0709e)
-                # query = f"`quotes upsert (`[s:{sym};{date_str}]{resp.open}e;{resp.close}e;{resp.close}e)"
-                print("type(resp.close )", type(resp.close))
-                query = f"`quotes upsert (`{sym};{date_str};{resp.open}e;{resp.close}e;{resp.close}e)"
-                print(query)
+                
+                # print("type(resp.close )", type(resp.close))
+                # query = f"`quotes upsert ([s:{date_str};`{sym}];{resp.open}e;{resp.close}e;{resp.close}e)"
+                query = f"`quotes upsert ({date_str};`{sym};{resp.open}e;{resp.close}e;{resp.close}e)"
+                # print(query)
                 pyq.q(query)
-    pyq.q()
-    pyq.q("`symbol$() xkey `quotes")
-    pyq.q("`symbol$() xkey `symbols")
-    pyq.q("`:/home/acer/github/kdbLearn/companylist dsave `symbols`quotes")
+    # pyq.q()
+    # pyq.q("`symbol$() xkey `quotes")
+    # pyq.q("`symbol$() xkey `symbols")
+    # pyq.q("`:/home/acer/github/kdbLearn/companylist dsave `symbols`quotes")
     # pyq.q("`:/home/acer/github/kdbLearn/companylist dsave `symbols")
-    
+    # pyq.q("")
+    # pyq.q("")
+        pyq.q("`:/home/acer/github/kdbLearn/quotes.csv 0:.h.tx[`csv;quotes]")
+        print("Elapsed time", time.time() - T0)

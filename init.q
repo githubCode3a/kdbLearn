@@ -1,7 +1,10 @@
 \cd /home/acer/github/kdbLearn/
-symbols:("SS";enlist",")0:`:/home/acer/github/kdbLearn/companylist.csv
+symbols: ("SSFSISS";enlist csv) 0: `:/home/acer/github/kdbLearn/companylist.csv
 
 
-quotes:([]date:`date$();sym:`symbol$();spot:`real$();open:`real$();close:`real$())
+quotes:("DSEEE";enlist",")0:`:/home/acer/github/kdbLearn/quotes.csv
+//quotes:([]date:`date$();sym:`symbol$();spot:`real$();open:`real$();close:`real$())
 
-`:/home/acer/github/kdbLearn/companylist dsave `symbols`quotes
+trades:([]date:`date$();time:`time$();sym:`symbol$(); price:`real$();size:`int$(); cond:`char$())
+
+`:/home/acer/github/kdbLearn/quotes.csv 0:.h.tx[`csv;quotes]

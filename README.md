@@ -23,7 +23,10 @@ Rapid  API
 
 \l /home/acer/github/kdbLearn/companylist
 
-symbols:("SS";enlist",")0:`:/home/acer/github/kdbLearn/companylist.csv
+
+
+symbols: ("SSFSISS";enlist csv) 0: `:/home/acer/github/kdbLearn/companylist.csv
+
 `Symbol xkey `symbols
 getallsymbols:{select from symbols}
 f:{select from symbols}
@@ -46,7 +49,7 @@ x = q.f()
 <!-- https://code.kx.com/q/learn/startingkdb/tables/ -->
 create an empty table
 quotes:([]date:`date$();sym:`symbol$();spot:`real$();open:`real$();close:`real$())
-`sym`date xkey `quotes
+`date`sym xkey `quotes
 
 `:/home/acer/github/kdbLearn/companylist dsave `symbols`quotes
 `:/home/acer/github/kdbLearn/companylist dsave `symbols`quotes
@@ -79,3 +82,6 @@ trades:([]date:`date$();sym:`symbol$(); price:`real$();size:`int$())
 
 pyq.q("`sym`date xkey `quotes")
 pyq.q("`Symbol xkey `symbols")
+
+
+`:quotes.csv 0:.h.tx[`csv;quotes] / save in csv format
