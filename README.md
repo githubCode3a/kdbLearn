@@ -20,11 +20,21 @@ aGls_e4_gw0XgXU_XY64XFrrP88o_tcQ3qmYWY
 
 Rapid  API
 
+
+
+
 symbols:("SS";enlist",")0:`:/home/acer/github/kdbLearn/companylist.csv
 getallsymbols:{select from symbols}
 f:{select from symbols}
 
 
+
+`:/home/acer/github/kdbLearn/companylist dsave `symbols
+
+
 ##yezheng: but not importing everything
 x = q.getallsymbols()
 x = q.f()
+
+
+`:/home/acer/github/kdbLearn/db1 dsave`sym xasc'`t`q --> create FOLDER db1
