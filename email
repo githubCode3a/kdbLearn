@@ -1,0 +1,10 @@
+I import  one-week/one-month daily data from REST API into one kdb:
+
+(1) API: I tried. [1,2,3]. etc. and then decides to use [2]
+(2) coding language: 
+(A) started with c (rather than c++ since Kdb+q/ supports gcc better than g++?) but confront difficulty (especially when I am not an expert in kdb+/q). [4]
+(B) 
+[1] Rapid API
+[2] Polygon https://polygon.io/
+[3] Alpaca https://alpaca.markets/docs/api-documentation/client-sdk/
+[4] https://code.kx.com/q/interfaces/using-c-functions/
