@@ -1,0 +1,1 @@
+/usr/bin/cc  -g   CMakeFiles/test2Formatted.dir/test2.c.o CMakeFiles/test2Formatted.dir/parse_flags.c.o  -o test2Formatted -rdynamic ../libjson-c.so.5.0.0 -Wl,-rpath,/home/acer/github/kdbLearn/UniBit/json-c-build 

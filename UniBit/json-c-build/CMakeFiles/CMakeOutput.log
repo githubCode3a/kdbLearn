@@ -1,0 +1,1210 @@
+The system is: Linux - 4.15.0-101-generic - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/3.5.1/CompilerIdC/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bf8a1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bf8a1.dir/build.make CMakeFiles/cmTC_bf8a1.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bf8a1.dir/testCCompiler.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_bf8a1.dir/testCCompiler.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_bf8a1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bf8a1.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_bf8a1.dir/testCCompiler.c.o  -o cmTC_bf8a1 -rdynamic 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_36cb4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_36cb4.dir/build.make CMakeFiles/cmTC_36cb4.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_36cb4.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_36cb4.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_36cb4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_36cb4.dir/link.txt --verbose=1
+/usr/bin/cc      -v CMakeFiles/cmTC_36cb4.dir/CMakeCCompilerABI.c.o  -o cmTC_36cb4 -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.12' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.12) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_36cb4' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccttpU7L.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_36cb4 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_36cb4.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_36cb4/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_36cb4.dir/build.make CMakeFiles/cmTC_36cb4.dir/build]
+  ignore line: [make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_36cb4.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_36cb4.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_36cb4]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_36cb4.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_36cb4.dir/CMakeCCompilerABI.c.o  -o cmTC_36cb4 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.12' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.12) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_36cb4' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccttpU7L.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_36cb4 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_36cb4.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccttpU7L.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--sysroot=/] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_36cb4] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
+    arg [CMakeFiles/cmTC_36cb4.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5] ==> [/usr/lib/gcc/x86_64-linux-gnu/5]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> [/usr/lib]
+  implicit libs: [c]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/5;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_18574/fast"
+/usr/bin/make -f CMakeFiles/cmTC_18574.dir/build.make CMakeFiles/cmTC_18574.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_18574.dir/feature_tests.c.o
+/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_18574.dir/feature_tests.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_18574
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_18574.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_18574.dir/feature_tests.c.o  -o cmTC_18574 -rdynamic 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d6e86/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d6e86.dir/build.make CMakeFiles/cmTC_d6e86.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d6e86.dir/feature_tests.c.o
+/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_d6e86.dir/feature_tests.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_d6e86
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d6e86.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_d6e86.dir/feature_tests.c.o  -o cmTC_d6e86 -rdynamic 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_58f10/fast"
+/usr/bin/make -f CMakeFiles/cmTC_58f10.dir/build.make CMakeFiles/cmTC_58f10.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_58f10.dir/feature_tests.c.o
+/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_58f10.dir/feature_tests.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_58f10
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_58f10.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_58f10.dir/feature_tests.c.o  -o cmTC_58f10 -rdynamic 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if the include file sys/resource.h exists passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8b84c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8b84c.dir/build.make CMakeFiles/cmTC_8b84c.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8b84c.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_8b84c.dir/CheckIncludeFile.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_8b84c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8b84c.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_8b84c.dir/CheckIncludeFile.c.o  -o cmTC_8b84c -rdynamic 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Determining if the getrusage exist passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c8a8d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c8a8d.dir/build.make CMakeFiles/cmTC_c8a8d.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c8a8d.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_c8a8d.dir/CheckSymbolExists.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_c8a8d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c8a8d.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_c8a8d.dir/CheckSymbolExists.c.o  -o cmTC_c8a8d -rdynamic 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+File /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/resource.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getrusage
+  return ((int*)(&getrusage))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the include file fcntl.h exists passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9d413/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9d413.dir/build.make CMakeFiles/cmTC_9d413.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9d413.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_9d413.dir/CheckIncludeFile.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_9d413
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9d413.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_9d413.dir/CheckIncludeFile.c.o  -o cmTC_9d413 -rdynamic 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file inttypes.h exists passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cf045/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cf045.dir/build.make CMakeFiles/cmTC_cf045.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cf045.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_cf045.dir/CheckIncludeFile.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_cf045
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cf045.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_cf045.dir/CheckIncludeFile.c.o  -o cmTC_cf045 -rdynamic 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stdarg.h exists passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4b570/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4b570.dir/build.make CMakeFiles/cmTC_4b570.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4b570.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_4b570.dir/CheckIncludeFile.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_4b570
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4b570.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_4b570.dir/CheckIncludeFile.c.o  -o cmTC_4b570 -rdynamic 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file strings.h exists passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8f7e8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8f7e8.dir/build.make CMakeFiles/cmTC_8f7e8.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8f7e8.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_8f7e8.dir/CheckIncludeFile.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_8f7e8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8f7e8.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_8f7e8.dir/CheckIncludeFile.c.o  -o cmTC_8f7e8 -rdynamic 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file string.h exists passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2fe55/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2fe55.dir/build.make CMakeFiles/cmTC_2fe55.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2fe55.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_2fe55.dir/CheckIncludeFile.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_2fe55
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2fe55.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_2fe55.dir/CheckIncludeFile.c.o  -o cmTC_2fe55 -rdynamic 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file syslog.h exists passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0ff27/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0ff27.dir/build.make CMakeFiles/cmTC_0ff27.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0ff27.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_0ff27.dir/CheckIncludeFile.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_0ff27
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0ff27.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_0ff27.dir/CheckIncludeFile.c.o  -o cmTC_0ff27 -rdynamic 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Determining if files stdlib.h;stdarg.h;string.h;float.h exist passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_457fd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_457fd.dir/build.make CMakeFiles/cmTC_457fd.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_457fd.dir/CheckIncludeFiles.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_457fd.dir/CheckIncludeFiles.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_457fd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_457fd.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_457fd.dir/CheckIncludeFiles.c.o  -o cmTC_457fd -rdynamic 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file unistd.h exists passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e416d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e416d.dir/build.make CMakeFiles/cmTC_e416d.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e416d.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_e416d.dir/CheckIncludeFile.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_e416d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e416d.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_e416d.dir/CheckIncludeFile.c.o  -o cmTC_e416d -rdynamic 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_eeec5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_eeec5.dir/build.make CMakeFiles/cmTC_eeec5.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_eeec5.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_eeec5.dir/CheckIncludeFile.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_eeec5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eeec5.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_eeec5.dir/CheckIncludeFile.c.o  -o cmTC_eeec5 -rdynamic 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file dlfcn.h exists passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6d3c7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6d3c7.dir/build.make CMakeFiles/cmTC_6d3c7.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6d3c7.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_6d3c7.dir/CheckIncludeFile.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_6d3c7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6d3c7.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_6d3c7.dir/CheckIncludeFile.c.o  -o cmTC_6d3c7 -rdynamic 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file endian.h exists passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fb9fc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fb9fc.dir/build.make CMakeFiles/cmTC_fb9fc.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fb9fc.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_fb9fc.dir/CheckIncludeFile.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_fb9fc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fb9fc.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_fb9fc.dir/CheckIncludeFile.c.o  -o cmTC_fb9fc -rdynamic 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file limits.h exists passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_dc916/fast"
+/usr/bin/make -f CMakeFiles/cmTC_dc916.dir/build.make CMakeFiles/cmTC_dc916.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dc916.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_dc916.dir/CheckIncludeFile.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_dc916
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dc916.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_dc916.dir/CheckIncludeFile.c.o  -o cmTC_dc916 -rdynamic 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file locale.h exists passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f4a2f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f4a2f.dir/build.make CMakeFiles/cmTC_f4a2f.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f4a2f.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_f4a2f.dir/CheckIncludeFile.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_f4a2f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f4a2f.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_f4a2f.dir/CheckIncludeFile.c.o  -o cmTC_f4a2f -rdynamic 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file memory.h exists passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_80b2e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_80b2e.dir/build.make CMakeFiles/cmTC_80b2e.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_80b2e.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_80b2e.dir/CheckIncludeFile.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_80b2e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_80b2e.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_80b2e.dir/CheckIncludeFile.c.o  -o cmTC_80b2e -rdynamic 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f1c82/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f1c82.dir/build.make CMakeFiles/cmTC_f1c82.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f1c82.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_f1c82.dir/CheckIncludeFile.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_f1c82
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f1c82.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_f1c82.dir/CheckIncludeFile.c.o  -o cmTC_f1c82 -rdynamic 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stdlib.h exists passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_de44e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_de44e.dir/build.make CMakeFiles/cmTC_de44e.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_de44e.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_de44e.dir/CheckIncludeFile.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_de44e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_de44e.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_de44e.dir/CheckIncludeFile.c.o  -o cmTC_de44e -rdynamic 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file sys/cdefs.h exists passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_680ff/fast"
+/usr/bin/make -f CMakeFiles/cmTC_680ff.dir/build.make CMakeFiles/cmTC_680ff.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_680ff.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_680ff.dir/CheckIncludeFile.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_680ff
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_680ff.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_680ff.dir/CheckIncludeFile.c.o  -o cmTC_680ff -rdynamic 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file sys/param.h exists passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_577ec/fast"
+/usr/bin/make -f CMakeFiles/cmTC_577ec.dir/build.make CMakeFiles/cmTC_577ec.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_577ec.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_577ec.dir/CheckIncludeFile.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_577ec
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_577ec.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_577ec.dir/CheckIncludeFile.c.o  -o cmTC_577ec -rdynamic 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file sys/stat.h exists passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a4d3f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a4d3f.dir/build.make CMakeFiles/cmTC_a4d3f.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a4d3f.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_a4d3f.dir/CheckIncludeFile.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_a4d3f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4d3f.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_a4d3f.dir/CheckIncludeFile.c.o  -o cmTC_a4d3f -rdynamic 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file xlocale.h exists passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_29abb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_29abb.dir/build.make CMakeFiles/cmTC_29abb.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_29abb.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_29abb.dir/CheckIncludeFile.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_29abb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_29abb.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_29abb.dir/CheckIncludeFile.c.o  -o cmTC_29abb -rdynamic 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Determining if the INFINITY exist passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_14018/fast"
+/usr/bin/make -f CMakeFiles/cmTC_14018.dir/build.make CMakeFiles/cmTC_14018.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_14018.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_14018.dir/CheckSymbolExists.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_14018
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_14018.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_14018.dir/CheckSymbolExists.c.o  -o cmTC_14018 -rdynamic -lm 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+File /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef INFINITY
+  return ((int*)(&INFINITY))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the isinf exist passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7c2f5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7c2f5.dir/build.make CMakeFiles/cmTC_7c2f5.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7c2f5.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_7c2f5.dir/CheckSymbolExists.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_7c2f5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7c2f5.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_7c2f5.dir/CheckSymbolExists.c.o  -o cmTC_7c2f5 -rdynamic -lm 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+File /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef isinf
+  return ((int*)(&isinf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the isnan exist passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8ad71/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8ad71.dir/build.make CMakeFiles/cmTC_8ad71.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8ad71.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_8ad71.dir/CheckSymbolExists.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_8ad71
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8ad71.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_8ad71.dir/CheckSymbolExists.c.o  -o cmTC_8ad71 -rdynamic -lm 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+File /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef isnan
+  return ((int*)(&isnan))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the nan exist passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_73b24/fast"
+/usr/bin/make -f CMakeFiles/cmTC_73b24.dir/build.make CMakeFiles/cmTC_73b24.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_73b24.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_73b24.dir/CheckSymbolExists.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_73b24
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_73b24.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_73b24.dir/CheckSymbolExists.c.o  -o cmTC_73b24 -rdynamic -lm 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+File /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef nan
+  return ((int*)(&nan))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the snprintf exist passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f46c5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f46c5.dir/build.make CMakeFiles/cmTC_f46c5.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f46c5.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_f46c5.dir/CheckSymbolExists.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_f46c5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f46c5.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_f46c5.dir/CheckSymbolExists.c.o  -o cmTC_f46c5 -rdynamic -lm 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+File /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef snprintf
+  return ((int*)(&snprintf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the vasprintf exist passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_eccb6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_eccb6.dir/build.make CMakeFiles/cmTC_eccb6.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_eccb6.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_eccb6.dir/CheckSymbolExists.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_eccb6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eccb6.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_eccb6.dir/CheckSymbolExists.c.o  -o cmTC_eccb6 -rdynamic -lm 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+File /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef vasprintf
+  return ((int*)(&vasprintf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the vsnprintf exist passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4aaeb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4aaeb.dir/build.make CMakeFiles/cmTC_4aaeb.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4aaeb.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_4aaeb.dir/CheckSymbolExists.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_4aaeb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4aaeb.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_4aaeb.dir/CheckSymbolExists.c.o  -o cmTC_4aaeb -rdynamic -lm 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+File /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef vsnprintf
+  return ((int*)(&vsnprintf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the vprintf exist passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8712b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8712b.dir/build.make CMakeFiles/cmTC_8712b.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8712b.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_8712b.dir/CheckSymbolExists.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_8712b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8712b.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_8712b.dir/CheckSymbolExists.c.o  -o cmTC_8712b -rdynamic -lm 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+File /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef vprintf
+  return ((int*)(&vprintf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the open exist passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c37e7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c37e7.dir/build.make CMakeFiles/cmTC_c37e7.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c37e7.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_c37e7.dir/CheckSymbolExists.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_c37e7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c37e7.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_c37e7.dir/CheckSymbolExists.c.o  -o cmTC_c37e7 -rdynamic -lm 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+File /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <fcntl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef open
+  return ((int*)(&open))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the realloc exist passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ed516/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ed516.dir/build.make CMakeFiles/cmTC_ed516.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ed516.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_ed516.dir/CheckSymbolExists.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_ed516
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ed516.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_ed516.dir/CheckSymbolExists.c.o  -o cmTC_ed516 -rdynamic -lm 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+File /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef realloc
+  return ((int*)(&realloc))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the setlocale exist passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_922c5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_922c5.dir/build.make CMakeFiles/cmTC_922c5.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_922c5.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_922c5.dir/CheckSymbolExists.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_922c5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_922c5.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_922c5.dir/CheckSymbolExists.c.o  -o cmTC_922c5 -rdynamic -lm 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+File /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <locale.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef setlocale
+  return ((int*)(&setlocale))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the uselocale exist passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1c50c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1c50c.dir/build.make CMakeFiles/cmTC_1c50c.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1c50c.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_1c50c.dir/CheckSymbolExists.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_1c50c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1c50c.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_1c50c.dir/CheckSymbolExists.c.o  -o cmTC_1c50c -rdynamic -lm 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+File /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <locale.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef uselocale
+  return ((int*)(&uselocale))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strcasecmp exist passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_49595/fast"
+/usr/bin/make -f CMakeFiles/cmTC_49595.dir/build.make CMakeFiles/cmTC_49595.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_49595.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_49595.dir/CheckSymbolExists.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_49595
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_49595.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_49595.dir/CheckSymbolExists.c.o  -o cmTC_49595 -rdynamic -lm 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+File /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <strings.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strcasecmp
+  return ((int*)(&strcasecmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strncasecmp exist passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b86f8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b86f8.dir/build.make CMakeFiles/cmTC_b86f8.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b86f8.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_b86f8.dir/CheckSymbolExists.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_b86f8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b86f8.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_b86f8.dir/CheckSymbolExists.c.o  -o cmTC_b86f8 -rdynamic -lm 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+File /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <strings.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strncasecmp
+  return ((int*)(&strncasecmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strdup exist passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_34d11/fast"
+/usr/bin/make -f CMakeFiles/cmTC_34d11.dir/build.make CMakeFiles/cmTC_34d11.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_34d11.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_34d11.dir/CheckSymbolExists.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_34d11
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_34d11.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_34d11.dir/CheckSymbolExists.c.o  -o cmTC_34d11 -rdynamic -lm 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+File /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <string.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strdup
+  return ((int*)(&strdup))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strerror exist passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c7e84/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c7e84.dir/build.make CMakeFiles/cmTC_c7e84.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c7e84.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_c7e84.dir/CheckSymbolExists.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_c7e84
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c7e84.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_c7e84.dir/CheckSymbolExists.c.o  -o cmTC_c7e84 -rdynamic -lm 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+File /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <string.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strerror
+  return ((int*)(&strerror))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the vsyslog exist passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b675f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b675f.dir/build.make CMakeFiles/cmTC_b675f.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b675f.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_b675f.dir/CheckSymbolExists.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_b675f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b675f.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_b675f.dir/CheckSymbolExists.c.o  -o cmTC_b675f -rdynamic -lm 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+File /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <syslog.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef vsyslog
+  return ((int*)(&vsyslog))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strtoll exist passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f2bd0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f2bd0.dir/build.make CMakeFiles/cmTC_f2bd0.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f2bd0.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_f2bd0.dir/CheckSymbolExists.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_f2bd0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f2bd0.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_f2bd0.dir/CheckSymbolExists.c.o  -o cmTC_f2bd0 -rdynamic -lm 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+File /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strtoll
+  return ((int*)(&strtoll))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strtoull exist passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6a65c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6a65c.dir/build.make CMakeFiles/cmTC_6a65c.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6a65c.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_6a65c.dir/CheckSymbolExists.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_6a65c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6a65c.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_6a65c.dir/CheckSymbolExists.c.o  -o cmTC_6a65c -rdynamic -lm 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+File /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strtoull
+  return ((int*)(&strtoull))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7aa34/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7aa34.dir/build.make CMakeFiles/cmTC_7aa34.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7aa34.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_7aa34.dir/CheckIncludeFile.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_7aa34
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7aa34.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_7aa34.dir/CheckIncludeFile.c.o  -o cmTC_7aa34 -rdynamic 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Determining size of int passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_572c9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_572c9.dir/build.make CMakeFiles/cmTC_572c9.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_572c9.dir/SIZEOF_INT.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_572c9.dir/SIZEOF_INT.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CheckTypeSize/SIZEOF_INT.c
+Linking C executable cmTC_572c9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_572c9.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_572c9.dir/SIZEOF_INT.c.o  -o cmTC_572c9 -rdynamic -lm 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Determining size of int64_t passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a021f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a021f.dir/build.make CMakeFiles/cmTC_a021f.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a021f.dir/SIZEOF_INT64_T.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_a021f.dir/SIZEOF_INT64_T.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CheckTypeSize/SIZEOF_INT64_T.c
+Linking C executable cmTC_a021f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a021f.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_a021f.dir/SIZEOF_INT64_T.c.o  -o cmTC_a021f -rdynamic -lm 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Determining size of long passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5c5ad/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5c5ad.dir/build.make CMakeFiles/cmTC_5c5ad.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5c5ad.dir/SIZEOF_LONG.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_5c5ad.dir/SIZEOF_LONG.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CheckTypeSize/SIZEOF_LONG.c
+Linking C executable cmTC_5c5ad
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5c5ad.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_5c5ad.dir/SIZEOF_LONG.c.o  -o cmTC_5c5ad -rdynamic -lm 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Determining size of long long passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3ca5c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3ca5c.dir/build.make CMakeFiles/cmTC_3ca5c.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3ca5c.dir/SIZEOF_LONG_LONG.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_3ca5c.dir/SIZEOF_LONG_LONG.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CheckTypeSize/SIZEOF_LONG_LONG.c
+Linking C executable cmTC_3ca5c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3ca5c.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_3ca5c.dir/SIZEOF_LONG_LONG.c.o  -o cmTC_3ca5c -rdynamic -lm 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Determining size of size_t passed with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_260f9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_260f9.dir/build.make CMakeFiles/cmTC_260f9.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_260f9.dir/SIZEOF_SIZE_T.c.o
+/usr/bin/cc  -D_GNU_SOURCE   -o CMakeFiles/cmTC_260f9.dir/SIZEOF_SIZE_T.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CheckTypeSize/SIZEOF_SIZE_T.c
+Linking C executable cmTC_260f9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_260f9.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_260f9.dir/SIZEOF_SIZE_T.c.o  -o cmTC_260f9 -rdynamic -lm 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+
+Performing C SOURCE FILE Test HAVE_ATOMIC_BUILTINS succeeded with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6fe88/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6fe88.dir/build.make CMakeFiles/cmTC_6fe88.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6fe88.dir/src.c.o
+/usr/bin/cc  -D_GNU_SOURCE  -DHAVE_ATOMIC_BUILTINS   -o CMakeFiles/cmTC_6fe88.dir/src.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_6fe88
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6fe88.dir/link.txt --verbose=1
+/usr/bin/cc   -DHAVE_ATOMIC_BUILTINS    CMakeFiles/cmTC_6fe88.dir/src.c.o  -o cmTC_6fe88 -rdynamic -lm 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { int i, x = 0; i = __sync_add_and_fetch(&x,1); return x; }
+Performing C SOURCE FILE Test HAVE___THREAD succeeded with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5ac59/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5ac59.dir/build.make CMakeFiles/cmTC_5ac59.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5ac59.dir/src.c.o
+/usr/bin/cc  -D_GNU_SOURCE  -DHAVE___THREAD   -o CMakeFiles/cmTC_5ac59.dir/src.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_5ac59
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ac59.dir/link.txt --verbose=1
+/usr/bin/cc   -DHAVE___THREAD    CMakeFiles/cmTC_5ac59.dir/src.c.o  -o cmTC_5ac59 -rdynamic -lm 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+Source file was:
+__thread int x = 0; int main() { return 0; }
+Performing C SOURCE FILE Test REENTRANT_WORKS succeeded with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_de900/fast"
+/usr/bin/make -f CMakeFiles/cmTC_de900.dir/build.make CMakeFiles/cmTC_de900.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_de900.dir/src.c.o
+/usr/bin/cc  -D_GNU_SOURCE  -ffunction-sections -fdata-sections -Werror -Wall -Wcast-qual -Wno-error=deprecated-declarations -Wextra -Wwrite-strings -Wno-unused-parameter -Wstrict-prototypes -DREENTRANT_WORKS   -o CMakeFiles/cmTC_de900.dir/src.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_de900
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_de900.dir/link.txt --verbose=1
+/usr/bin/cc   -ffunction-sections -fdata-sections -Werror -Wall -Wcast-qual -Wno-error=deprecated-declarations -Wextra -Wwrite-strings -Wno-unused-parameter -Wstrict-prototypes -DREENTRANT_WORKS    CMakeFiles/cmTC_de900.dir/src.c.o  -o cmTC_de900 -rdynamic -lm 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+	/* uClibc toolchains without threading barf when _REENTRANT is defined */
+	#define _REENTRANT 1
+	#include <sys/types.h>
+	int main (void)
+	{
+	  return 0;
+	}
+	
+Performing C SOURCE FILE Test BSYMBOLIC_WORKS succeeded with the following output:
+Change Dir: /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e1abf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e1abf.dir/build.make CMakeFiles/cmTC_e1abf.dir/build
+make[1]: Entering directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e1abf.dir/src.c.o
+/usr/bin/cc  -D_GNU_SOURCE  -ffunction-sections -fdata-sections -Werror -Wall -Wcast-qual -Wno-error=deprecated-declarations -Wextra -Wwrite-strings -Wno-unused-parameter -Wstrict-prototypes -DBSYMBOLIC_WORKS   -o CMakeFiles/cmTC_e1abf.dir/src.c.o   -c /home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_e1abf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e1abf.dir/link.txt --verbose=1
+/usr/bin/cc   -ffunction-sections -fdata-sections -Werror -Wall -Wcast-qual -Wno-error=deprecated-declarations -Wextra -Wwrite-strings -Wno-unused-parameter -Wstrict-prototypes -DBSYMBOLIC_WORKS    CMakeFiles/cmTC_e1abf.dir/src.c.o  -o cmTC_e1abf -rdynamic -lm -Wl,-Bsymbolic-functions 
+make[1]: Leaving directory '/home/acer/github/kdbLearn/UniBit/json-c-build/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+	int main (void)
+	{
+	  return 0;
+	}
+	
