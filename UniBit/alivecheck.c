@@ -1,6 +1,9 @@
 // https://code.kx.com/q/wp/capi/
 // ./q/l64/q -p 12345
 // clear && printf '\e[3J';  gcc -DKXVER=3 -o alivecheck alivecheck.c c.o -lpthread; ./alivecheck
+// for mac osx
+// clear && printf '\e[3J';  g++ -stdlib=libstdc++ -DKXVER=3 -o alivecheck alivecheck.c c.o -lpthread; ./alivecheck
+// clear && printf '\e[3J';  clang -stdlib=libstdc++ -DKXVER=3 -o alivecheck alivecheck.c c.o -lpthread; ./alivecheck
 //-----------------
 // The c.o header file is required for compilation.
 // https://code.kx.com/q/interfaces/c-client-for-q/

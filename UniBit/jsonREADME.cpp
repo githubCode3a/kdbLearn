@@ -1,5 +1,11 @@
 // https://github.com/nlohmann/json/tree/develop/doc/examples
 // clear && printf '\e[3J';  g++ -DJSON_MultipleHeaders=ON -DKXVER=3 -o jsonREADME jsonREADME.cpp c.o -lpthread; ./jsonREADME
+//-------
+// Without it, please set your include path accordingly:
+// CPPFLAGS: -I/usr/local/opt/nlohmann_json/include
+// work for mac!!!
+// clear && printf '\e[3J';  g++ -std=c++11 -I/usr/local/opt/nlohmann_json/include -DKXVER=3 -o jsonREADME jsonREADME.cpp c.o -lpthread; ./jsonREADME
+//-------
 #include <iostream>
 #include <iomanip>
 #include <nlohmann/json.hpp> // https://packages.debian.org/stretch/all/nlohmann-json-dev/download
