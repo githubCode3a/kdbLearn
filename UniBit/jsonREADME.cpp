@@ -3,6 +3,8 @@
 //-------
 // Without it, please set your include path accordingly:
 // CPPFLAGS: -I/usr/local/opt/nlohmann_json/include
+
+// Done with Ubuntu!!!!
 // work for mac!!!
 // clear && printf '\e[3J';  g++ -std=c++11 -I/usr/local/opt/nlohmann_json/include -DKXVER=3 -o jsonREADME jsonREADME.cpp c.o -lpthread; ./jsonREADME
 //-------
@@ -10,7 +12,7 @@
 #include <iomanip>
 #include <nlohmann/json.hpp> // https://packages.debian.org/stretch/all/nlohmann-json-dev/download
 // and check installation via https://www.thelinuxfaq.com/ubuntu/ubuntu-17-04-zesty-zapus/nlohmann-json-dev
-
+// https://ubuntu.pkgs.org/18.04/kodi-amd64/nlohmann-json3-dev_3.1.2-2~bionic_all.deb.html
 using json = nlohmann::json;
 
 int main()

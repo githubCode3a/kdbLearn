@@ -1,13 +1,21 @@
 // https://code.kx.com/q/wp/capi/
 // ./q/l64/q -p 12345
+
+// works for Ubuntu!!
 // clear && printf '\e[3J';  gcc -DKXVER=3 -o alivecheck alivecheck.c c.o -lpthread; ./alivecheck
 // for mac osx
-// clear && printf '\e[3J';  g++ -stdlib=libstdc++ -DKXVER=3 -o alivecheck alivecheck.c c.o -lpthread; ./alivecheck
+// clear && printf '\e[3J';  g++  -DKXVER=3 -o alivecheck alivecheck.c c.o -lpthread; ./alivecheck
+
+
+// DOES NOT WORK FOR mac
+// clear && printf '\e[3J';  g++  -DKXVER=3 -o alivecheck alivecheck.c c.o -lpthread; ./alivecheck
 // clear && printf '\e[3J';  clang -stdlib=libstdc++ -DKXVER=3 -o alivecheck alivecheck.c c.o -lpthread; ./alivecheck
 //-----------------
 // The c.o header file is required for compilation.
 // https://code.kx.com/q/interfaces/c-client-for-q/
 // https://github.com/KxSystems/kdb/blob/master/l64/c.o
+
+
 
 
 /* Filename: alivecheck.c */
