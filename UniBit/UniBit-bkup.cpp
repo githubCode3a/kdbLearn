@@ -1,5 +1,6 @@
-// clear && printf '\e[3J';  g++ -std=c++11 -o Album Album.cpp c.o -lpthread -lboost_system -lcrypto -lssl -lcpprest; ./Album
+// clear && printf '\e[3J';  g++ -std=c++11 -o UniBit UniBit.cpp c.o -lpthread -lboost_system -lcrypto -lssl -lcpprest; ./UniBit
 // http://www.atakansarioglu.com/easy-quick-start-cplusplus-rest-client-example-cpprest-tutorial/
+
 
 
 
@@ -25,7 +26,7 @@ int main() {
   
   // Make a GET request.
   .then([=](ostream outFile) {
-    *fileStream = outFile;
+    // *fileStream = outFile;
  
     // Create http_client to send the request.
     http_client client(U("https://api.unibit.ai"));
@@ -75,14 +76,14 @@ int main() {
   
   });
  
-  // Wait for the concurrent tasks to finish.
-  try {
-    while (!requestTask.is_done()) { 
-    //  std::cout << ".";  //yezheng: comment out!!!
-    }
-  } catch (const std::exception &e) {
-    printf("Error exception:%s\n", e.what());
-  }
+  // // Wait for the concurrent tasks to finish.
+  // try {
+  //   while (!requestTask.is_done()) { 
+  //   //  std::cout << ".";  //yezheng: comment out!!!
+  //   }
+  // } catch (const std::exception &e) {
+  //   printf("Error exception:%s\n", e.what());
+  // }
 
 
 
