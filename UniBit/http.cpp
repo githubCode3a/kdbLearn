@@ -105,7 +105,8 @@ int main(int argc,char *argv[])
 
     /* What are we going to send? */
     // message = "GET /api/realtimestock/AAPL?size=10&AccessKey=demo HTTP/1.1\r\nHost: api.unibit.ai\r\nAccept-Language: en, mi\r\n";
-    strcpy(message, "GET /api/realtimestock/AAPL?size=10&AccessKey=demo HTTP/1.1\r\nHost: api.unibit.ai\r\nAccept-Language: en, mi\r\n");
+    // strcpy(message, "GET /api/realtimestock/AAPL?size=10&AccessKey=demo HTTP/1.1\r\nHost: api.unibit.ai\r\nAccept-Language: en, mi\r\n");
+    strcpy(message, "GET /hello.txt HTTP/1.1\r\nUser-Agent: curl/7.16.3 libcurl/7.16.3 OpenSSL/0.9.7l zlib/1.2.3\r\nHost: www.example.com\r\nAccept-Language: en, mi\r\n");
     printf("Request:\n%s\n",message);
 
     /* create the socket */
