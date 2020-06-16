@@ -7,7 +7,7 @@
 #include <cpprest/http_client.h> // sudo apt install libcpprest-dev
 #include <cpprest/filestream.h>
 #include <cpprest/uri.h>
-#include <cpprest/json.h>
+// #include <cpprest/json.h>
 // #include <sstream>
 using namespace concurrency::streams; 
 using namespace utility;
@@ -48,14 +48,11 @@ int main() {
       throw std::runtime_error("Returned " + std::to_string(response.status_code()));
     }
  
-    // Write the response body to file stream.
-    response.body().read_to_end(fileStream->streambuf()).wait();
- 
-    // Close the file.
-    return fileStream->close();
+    // // Write the response body to file stream.
+    // response.body().read_to_end(fileStream->streambuf()).wait();// yezheng: this is the original one
 
 
-    ///
+      ///
 // https://www.drdobbs.com/cloud/using-the-microsoft-c-rest-sdk/240164544?pgno=2
   // Display the status code that the server returned
         std::wostringstream stream;
@@ -65,11 +62,17 @@ int main() {
         auto& target = sbuffer.collection();
  
         bodyStream.read_to_end(sbuffer).get();
- 
+        std::cout<< "=====sbuffer\t"<< sbuffer<<"\t\n";
         stream.str(std::wstring());
         stream << L"Response body: " << target.c_str();
         std::wcout << stream.str(); // std::wcout << stream.str();
-        std::cout<< "=====\t"<< target.c_str()<<"\t\n";
+        
+ 
+    // Close the file.
+    return fileStream->close();
+
+
+  
   });
  
   // Wait for the concurrent tasks to finish.

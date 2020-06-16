@@ -1,1 +1,100 @@
-{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/olegpogodaev/128.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg"}],"ad":{"company":"StatusCode Weekly","url":"http://statuscode.org/","text":"A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things."}}
+{
+  "Meta Data" : {
+    "ticker" : "AAPL",
+    "datapoints" : 10,
+    "credit cost" : 10,
+    "Time Zone" : "America/New_York",
+    "last refreshed" : "06/16/2020 at 04:24AM ET"
+  },
+  "Realtime Stock price" : [ {
+    "ticker" : "AAPL",
+    "date" : "20200331",
+    "minute" : "11:59:13",
+    "volume" : 19512731,
+    "price" : 258.7,
+    "timezone" : "EDT",
+    "timezone_name" : "America/New_York",
+    "gmt_offset" : -14400
+  }, {
+    "ticker" : "AAPL",
+    "date" : "20200331",
+    "minute" : "11:58:11",
+    "volume" : 19478187,
+    "price" : 258.61,
+    "timezone" : "EDT",
+    "timezone_name" : "America/New_York",
+    "gmt_offset" : -14400
+  }, {
+    "ticker" : "AAPL",
+    "date" : "20200331",
+    "minute" : "11:57:05",
+    "volume" : 19407514,
+    "price" : 258.57,
+    "timezone" : "EDT",
+    "timezone_name" : "America/New_York",
+    "gmt_offset" : -14400
+  }, {
+    "ticker" : "AAPL",
+    "date" : "20200331",
+    "minute" : "11:56:14",
+    "volume" : 19354187,
+    "price" : 258.49,
+    "timezone" : "EDT",
+    "timezone_name" : "America/New_York",
+    "gmt_offset" : -14400
+  }, {
+    "ticker" : "AAPL",
+    "date" : "20200331",
+    "minute" : "11:54:39",
+    "volume" : 19224950,
+    "price" : 258.9,
+    "timezone" : "EDT",
+    "timezone_name" : "America/New_York",
+    "gmt_offset" : -14400
+  }, {
+    "ticker" : "AAPL",
+    "date" : "20200331",
+    "minute" : "11:53:38",
+    "volume" : 19164451,
+    "price" : 258.93,
+    "timezone" : "EDT",
+    "timezone_name" : "America/New_York",
+    "gmt_offset" : -14400
+  }, {
+    "ticker" : "AAPL",
+    "date" : "20200331",
+    "minute" : "11:51:10",
+    "volume" : 18997219,
+    "price" : 259.41,
+    "timezone" : "EDT",
+    "timezone_name" : "America/New_York",
+    "gmt_offset" : -14400
+  }, {
+    "ticker" : "AAPL",
+    "date" : "20200331",
+    "minute" : "11:51:02",
+    "volume" : 18983999,
+    "price" : 259.15,
+    "timezone" : "EDT",
+    "timezone_name" : "America/New_York",
+    "gmt_offset" : -14400
+  }, {
+    "ticker" : "AAPL",
+    "date" : "20200331",
+    "minute" : "11:49:08",
+    "volume" : 18780093,
+    "price" : 258.85,
+    "timezone" : "EDT",
+    "timezone_name" : "America/New_York",
+    "gmt_offset" : -14400
+  }, {
+    "ticker" : "AAPL",
+    "date" : "20200331",
+    "minute" : "11:47:49",
+    "volume" : 18662773,
+    "price" : 259.53,
+    "timezone" : "EDT",
+    "timezone_name" : "America/New_York",
+    "gmt_offset" : -14400
+  } ]
+}
