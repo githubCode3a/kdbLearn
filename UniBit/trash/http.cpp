@@ -18,7 +18,7 @@
 #include <netdb.h> /* struct hostent, gethostbyname */
 #include<iostream>
 using namespace std;
-
+#define BUFFER_SIZE 128
 void error(const char *msg) { perror(msg); exit(0); }
 
 
@@ -107,7 +107,7 @@ int main(int argc,char *argv[])
     // message = "GET /api/realtimestock/AAPL?size=10&AccessKey=demo HTTP/1.1\r\nHost: api.unibit.ai\r\nAccept-Language: en, mi\r\n";
     // strcpy(message, "GET /api/realtimestock/AAPL?size=10&AccessKey=demo HTTP/1.1\r\nHost: api.unibit.ai\r\nAccept-Language: en, mi\r\n");
     // strcpy(message, "GET /hello.txt HTTP/1.1\r\nUser-Agent: curl/7.16.3 libcurl/7.16.3 OpenSSL/0.9.7l zlib/1.2.3\r\nHost: www.example.com\r\nAccept-Language: en, mi\r\n");
-    strcpy(message, "GET http://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1");
+    strcpy(message, "GET https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1");
     printf("Request:\n%s\n",message);
 
     /* create the socket */
@@ -143,18 +143,29 @@ int main(int argc,char *argv[])
     /* receive the response */
     memset(response,0,sizeof(response));
     total = sizeof(response)-1;
+    char buffer[BUFFER_SIZE];
     received = 0;
-    do {
-        bytes = read(sockfd,response+received,total-received);
-        if (bytes < 0)
-            error("ERROR reading response from socket");
-        if (bytes == 0)
-    	{	
-    		// cout<<"ERROR reading response from socket BYTE IS EMPTY\t\n";
-	        break;
-	    }
-        received+=bytes;
-    } while (received < total);
+    // do {
+    //     bytes = read(sockfd,buffer,total-received);
+    //     if (bytes < 0)
+    //         error("ERROR reading response from socket");
+    //     if (bytes == 0)
+    // 	{	
+    // 		// cout<<"ERROR reading response from socket BYTE IS EMPTY\t\n";
+	   //      break;
+	   //  }
+    //     received+=bytes;
+    // } while (received < total);
+	bzero(buffer, BUFFER_SIZE);
+	cout <<"????\tSTART\t\r\n";
+	int res = 1;
+    while (res ){
+    	res = read(sockfd, buffer, BUFFER_SIZE -1);
+    	cout <<res<<"????["<<buffer<< "]\r\n";
+    	// fprintf(stderr,"%s", buffer);
+    	bzero(buffer, BUFFER_SIZE);
+    	strcat(response, buffer );
+    }
 
     if (received == total)
         error("ERROR storing complete response from socket");
