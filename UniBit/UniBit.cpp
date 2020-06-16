@@ -3,6 +3,7 @@
 
 
 
+
 #include <iostream>
 #include <cpprest/http_client.h> // sudo apt install libcpprest-dev
 #include <cpprest/filestream.h>
@@ -25,20 +26,27 @@ int main() {
   
   // Make a GET request.
   .then([=](ostream outFile) {
-    *fileStream = outFile;
+    *fileStream = outFile;// 
+    // https://api.unibit.ai/v2/company/coreFinancials?tickers=ticker list&interval=A, Q or TTM&statement=see possible options&startDate=YYYY-MM-DD&endDate=YYYY-MM-DD&selectedFields=field list&dataType=json or csv&accessKey=your ke
  
     // Create http_client to send the request.
     http_client client(U("https://api.unibit.ai"));
- 
+ // https://api.unibit.ai/v2/stock/historical?tickers=AAPL&interval=1&startDate=2020-01-01&endDate=2020-05-01&dataType=json&accessKey=JApS-XgN6FCqejbOq9X3dSBFiHj83-FM
+
     // Build request URI and start the request.
     // https://reqres.in/api/users/1
     // https://api.unibit.ai/api/realtimestock/AAPL?size=10&AccessKey=demo
 
-
-    return client.request(methods::GET, uri_builder(U("api")).append_path(U("realtimestock")).append_path(U("AAPL"))
-      .append_query(U("size"), U("10"))// https://www.drdobbs.com/cloud/using-the-microsoft-c-rest-sdk/240164544?pgno=2
-      .append_query(U("AccessKey"), U("demo")) 
-      .to_string());
+    std::string mess = uri_builder(U("v2")).append_path(U("stock")).append_path(U("historical"))
+      .append_query(U("tickers"), U("AAPL"))// https://www.drdobbs.com/cloud/using-the-microsoft-c-rest-sdk/240164544?pgno=2
+      .append_query(U("interval"), U("1")) 
+      .append_query(U("startDate"), U("2020-01-01")) 
+      .append_query(U("endDate"), U("2020-05-01")) 
+      .append_query(U("dataType"), U("json")) 
+      .append_query(U("accessKey"), U("JApS-XgN6FCqejbOq9X3dSBFiHj83-FM")) 
+      .to_string();
+    std::cout<<"mess\t" <<mess<< '\n';
+    return client.request(methods::GET, mess);
   })
  
   // Get the response.
