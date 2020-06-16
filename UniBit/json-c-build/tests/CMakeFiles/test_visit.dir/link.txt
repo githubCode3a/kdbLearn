@@ -1,1 +1,0 @@
-/usr/bin/cc  -g   CMakeFiles/test_visit.dir/test_visit.c.o  -o test_visit -rdynamic ../libjson-c.so.5.0.0 -Wl,-rpath,/home/acer/github/kdbLearn/UniBit/json-c-build 
