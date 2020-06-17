@@ -5,6 +5,7 @@
 #include <iomanip>
 #include <nlohmann/json.hpp> 
 #include "common.h"
+#include "include/kdb_cpp.h"
 class KDB{
 	private:
 	 I handle;  // typedef int  I; // https://code.kx.com/q/wp/capi/
@@ -18,13 +19,54 @@ class KDB{
 	   
 	    r0(result);
 	    r1(result);
-	    kdb::Vector<int>(kK(result->k)[0],size());
 	    printf("Value returned is %f\n", result->f);
 	   printf("result->i\t%d\n",result->i);
 	   printf("result->k\t%d\n",result->k);
 
 	   return EXIT_SUCCESS;
 
+	}
+	int testCodyFengKdb(){
+	std::cout<<"testCodyFengKdb-------------\r\n";
+		kdb::Connector kcon;
+    if (!kcon.connect("127.0.0.1", 12345))
+        return -1;
+    
+    // Create a table
+    kcon.sync("tbl_test:([]col1:1 2 3 4;col2:1.1 2.2 3.3 4.4f;col3:`first`second`third`fourth)");
+
+    kdb::Result res = kcon.sync("select from tbl_test");
+    kdb::Table tbl = res.get_table();
+
+    // Read header
+    kdb::Vector<kdb::Type::Symbol> header = tbl.get_header();
+    std::cout << "=======================================\nHeaders: ";
+    for (auto const &it : header) {
+        std::cout << it << ' ';
+    }
+    std::cout << '\n';
+
+    // Traverse a column
+    kdb::Vector<kdb::Type::Long> column = tbl.get_column<kdb::Type::Long>(0);
+    std::cout << "=======================================\nColumn 0: ";
+    for (auto const &it : column) {
+        std::cout << it << ' ';
+    }
+    std::cout<<"[END] testCodyFengKdb-------------\r\n";
+
+    // Access cells by rows
+    std::cout << "=======================================\nPrinting a table:\n";
+    std::cout << "|| ";
+    for (auto const &it : header) {
+        std::cout << it << "\t|| ";
+    }
+    std::cout << "\n";
+    for (long long row = 0; row < tbl.nrow(); ++row) {
+        std::cout << "|  " << tbl.get<kdb::Type::Long>(row, 0) << "\t|  "
+                  << tbl.get<kdb::Type::Float>(row, 1) << "\t|  "
+                  << tbl.get<kdb::Type::Symbol>(row, 2) << "\t|\n";
+    }
+    
 	}
 public:
 	KDB(){
@@ -112,7 +154,7 @@ public:
 
 	//-----------
 
-	  
+	  testCodyFengKdb();
 	    return EXIT_SUCCESS;
 	    
 	}
