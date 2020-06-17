@@ -12,6 +12,9 @@ class KDB{
 	private:
 	 I handle;  // typedef int  I; // https://code.kx.com/q/wp/capi/
 	 kdb::Connector kcon;
+	 std::string filenameQuotes, ticker;
+	 char* querySaveQuotes, *queryLoadQuotes;
+
 	int handleQuery(char* query){
 		K result= k(handle, query, (K)0);
 	   if(isRemoteErr(result)) {
@@ -29,51 +32,170 @@ class KDB{
 	   return EXIT_SUCCESS;
 
 	}
+	int string2charStarMalloc(const std::string &qStr){
+
+		
+    	char *q  = (char *) malloc(qStr.size()+1);
+    	bzero(q, qStr.size()+1);
+    	strcpy(q, qStr.c_str());
+    	kcon.sync(q);
+    	free(q);
+    	
+    	return 0;
+
+	}
+
+	int getTable(char *querySelect){
+		kdb::Result res = kcon.sync(querySelect);
+	    kdb::Table tbl = res.get_table();
+
+	    // Read header
+	    kdb::Vector<kdb::Type::Symbol> header = tbl.get_header();
+	    std::cout << "=======================================\nHeaders: ";
+	    int cnt =0;
+	    for (auto const &it : header) {
+	        std::cout << it << '\t'<<cnt;
+	        cnt++;
+	    }
+	    std::cout << '\n';
+
+	    // Traverse a column
+	    kdb::Vector<kdb::Type::Long> column = tbl.get_column<kdb::Type::Long>(0);
+	    std::cout << "=======================================\nColumn 0: ";
+	    for (auto const &it : column) {
+	        std::cout << it << ' ';
+	    }
+	    std::cout << '\n';
+
+	    // Access cells by rows
+	    std::cout << "=======================================\nPrinting a table:\n";
+	    std::cout << "|| ";
+	    for (auto const &it : header) {
+	        std::cout << it << "\t|| ";
+	    }
+	    std::cout << "tbl.ncol()\t"<<tbl.ncol()<<"\n";
+	    for (long long row = 0; row < tbl.nrow(); ++row) {
+	        std::cout << "|  ";
+	        std::cout<< tbl.get<kdb::Type::Long>(row, 0) << "\t|  ";
+	        for (int i=1;i!=tbl.ncol(); i++){
+	            std::cout<< tbl.get<kdb::Type::Long>(row, i) << "\t|  ";
+	        } 
+	        std::cout<<"\n";
+	    }
+	    return 0;//success
+	    
+	}
+
+	// int getTable(const std::string &querySelectStr){
+	// 	char * querySelect   = (char *) malloc(querySelectStr.size()+1);
+ //    	bzero(querySelect, querySelectStr.size()+1);
+ //    	strcpy(querySelect, querySelectStr.c_str());
+    	
+
+	// 	kdb::Result res = kcon.sync(querySelect);
+	// 	free(querySelect);
+	//     kdb::Table tbl = res.get_table();
+
+	//     // Read header
+	//     kdb::Vector<kdb::Type::Symbol> header = tbl.get_header();
+	//     std::cout << "=======================================\nHeaders: ";
+	//     for (auto const &it : header) {
+	//         std::cout << it << ' ';
+	//     }
+	//     std::cout << '\n';
+
+	//     // Traverse a column
+	//     kdb::Vector<kdb::Type::Long> column = tbl.get_column<kdb::Type::Long>(0);
+	//     std::cout << "=======================================\nColumn 0: ";
+	//     for (auto const &it : column) {
+	//         std::cout << it << ' ';
+	//     }
+	//     std::cout<<"[END] getTable-------------\r\n";
+
+	//     // Access cells by rows
+	//     std::cout << "=======================================\nPrinting a table:\n";
+	//     std::cout << "|| ";
+	//     for (auto const &it : header) {
+	//         std::cout << it << "\t|| ";
+	//     }
+	//     std::cout << "\n";
+	//     for (long long row = 0; row < tbl.nrow(); ++row) {
+	//         std::cout << "|  " << tbl.get<kdb::Type::Long>(row, 0) << "\t|  "
+	//                   << tbl.get<kdb::Type::Float>(row, 1) << "\t|  "
+	//                   << tbl.get<kdb::Type::Symbol>(row, 2) << "\t|\n";
+	//     }
+	    
+	// }
 	int testCodyFengKdb(){
 	std::cout<<"testCodyFengKdb-------------\r\n";
 	// if (!kcon.connect(HOST_ADDR, HOST_PORT))// do not reconnect!!
  //        return -1;
+	
+    if (false ) {// FILE *file = fopen(filenameQuotes.c_str(), "r")
+        // fclose(file);
+        // return true;
+    } else {
+    	// Create a table
+ 
+		// string2charStarMalloc(ticker+ "quotes:([]date:`date$();high:`real$();low:`real$();adj_close:`real$();close:`real$();open:`real$())",q);	
+		string2charStarMalloc(ticker+ "quotes:([]date:`date$();high:`real$();low:`real$();adj_close:`real$();close:`real$();open:`real$())");	
+		// AAPLquotes:([]date:`date$();high:`real$();low:`real$();adj_close:`real$();close:`real$();open:`real$())
+		// trades:([]date:`date$();time:`time$();sym:`symbol$();price:`real$();size:`int$(); cond:`char$())
+		std::cout<<"hello-------------\r\n";
+		// https://code.kx.com/q/learn/startingkdb/tables/
+		// `trades insert (2013.07.01;10:03:54.347;`IBM;20.83e;40000;"N")
+		// `trades insert (2013.07.01;10:04:05.827;`MSFT;88.75e;2000;"B")
+		// `AAPLquotes upsert (date:2000.01.01;high:0.0e;low:0.0e;adj_close:0.0e;close:0.0e;open:0.0e)
+		
+		// `AAPLquotes insert (2000.01.01;0.0e;0.0e;0.0e;0.0e;0.0e) #works!!
+		string2charStarMalloc("`date xkey `"+ticker+"quotes");	
+		// `AAPLquotes upsert (2000.01.01;0.0e;0.0e;0.0e;0.0e;0.0e)
+		// `AAPLquotes upsert ([date:2000.01.01]0.0e;0.0e;0.0e;0.0e;0.0e)
+		// `AAPLquotes upsert ([2000.01.01]0.0e;0.0e;0.0e;0.0e;0.0e)
+		// `AAPLquotes upsert ([date:2000.01.01]high:0.0e;low:0.0e;adj_close:0.0e;close:0.0e;open:0.0e)
+		// AAPLquotes upsert ([2000.01.01]high:0.0e;low:0.0e;adj_close:0.0e;close:0.0e;open:0.0e)
+		// http://www.timestored.com/kdb-guides/errors/rank
+		// 'rank
+	    string2charStarMalloc("`"+ticker+"quotes upsert (2000.01.01;0.0e;0.0e;0.0e;0.0e;0.0e)");
+
+
+        kcon.sync(querySaveQuotes);
+    } 
+
+    // kcon.sync("tbl_test:([]col1:`first`second`third`first:1.1 2.2 3.3 4.4f;col3:`first`second`third`fourth)");
+    // kcon.sync("tbl_test:([]col1:1 2 3 4;1.1 2.2 3.3 4.4f;col3:`first`second`third`fourth)");
+    // tbl_test:([]col1:1 2 3 4;col2:1.1 2.2 3.3 4.4f;col3:`first`second`third`fourth)
+    // tbl_test:([]date:2020.01.01 2020.01.02 2020.01.03 2020.01.04;col2:1.1 2.2 3.3 4.4f;col3:`first`second`third`fourth)
+    // tbl_test:([]date:2020.01.01 2020.01.02;col2:1.1 3.3f;col3:`first`second) // WORKS!!
+    // tbl_test:([]date:2020.01.01 2020.01.02;col2:3.3f;col3:`second) // NOT WORK
+
+    // test:([]date:2000.01.01 2000.01.01;high:0.0 0.0f;col3:`first`second) // WORKS!!
+    // test:([]date:2000.01.01 2000.01.01;high:0.0 0.0f;low:0.0 0.0f;adj_close:0.0 0.0f;close:0.0 0.0f;open:0.0 0.0f) 
+    kcon.sync("test:([]dateTEST:2000.01.01 2000.01.01;high:0.0 0.0f;low:0.0 0.0f;adj_close:0.0 0.0f;close:0.0 0.0f;open:0.0 0.0f) ");
+    // kcon.sync("tbl_test:([]date:`2000.01.01:high:0.0e;low:0.0e)");
+    kcon.sync(queryLoadQuotes);
+
+	string2charStarMalloc("`date xkey `"+ticker+"quotes");	
     
-    
-    // Create a table
-    kcon.sync("tbl_test:([]col1:1 2 3 4;col2:1.1 2.2 3.3 4.4f;col3:`first`second`third`fourth)");
+	// {
+	// 	char *q;
+	// 	string2charStarMalloc(ticker+"quotes upsert([s:`2010-0-0]0.0;0.0;0.0;0.0;0.0)",q);	
+ //    	kcon.sync(q);
+ //    	free(q);
+	// }
 
-    // kdb::Result res = kcon.sync("select from tbl_test");
-    kdb::Result res = kcon.sync("select from quotes");
-    kdb::Table tbl = res.get_table();
 
-    // Read header
-    kdb::Vector<kdb::Type::Symbol> header = tbl.get_header();
-    std::cout << "=======================================\nHeaders: ";
-    for (auto const &it : header) {
-        std::cout << it << ' ';
-    }
-    std::cout << '\n';
-
-    // Traverse a column
-    kdb::Vector<kdb::Type::Long> column = tbl.get_column<kdb::Type::Long>(0);
-    std::cout << "=======================================\nColumn 0: ";
-    for (auto const &it : column) {
-        std::cout << it << ' ';
-    }
-    std::cout<<"[END] testCodyFengKdb-------------\r\n";
-
-    // Access cells by rows
-    std::cout << "=======================================\nPrinting a table:\n";
-    std::cout << "|| ";
-    for (auto const &it : header) {
-        std::cout << it << "\t|| ";
-    }
-    std::cout << "\n";
-    for (long long row = 0; row < tbl.nrow(); ++row) {
-        std::cout << "|  " << tbl.get<kdb::Type::Long>(row, 0) << "\t|  "
-                  << tbl.get<kdb::Type::Float>(row, 1) << "\t|  "
-                  << tbl.get<kdb::Type::Symbol>(row, 2) << "\t|\n";
-    }
-    
+	    getTable("select from test");
+	    {
+	    	std::string querySelectStr = "select from "+ticker+"quotes";
+			char * querySelect   = (char *) malloc(querySelectStr.size()+1);
+	    	bzero(querySelect, querySelectStr.size()+1);
+	    	strcpy(querySelect, querySelectStr.c_str());
+	    	getTable(querySelect);
+	    	free(querySelect);
+	    }
 	}
-public:
-	KDB(){
+	int queryHandleOldVersion(){
 		// KDB tutorial old fashioned!! // https://code.kx.com/q/interfaces/capiref/
 	    // I portnumber= HOST_PORT;
 	    // S hostname= HOST_ADDR;
@@ -96,27 +218,67 @@ public:
 	  //     "close" : 289.07,
 	  //     "open" : 286.25
 	    ///---------------------
-	if (!kcon.connect(HOST_ADDR, HOST_PORT))
+
+	    if (FILE *file = fopen(filenameQuotes.c_str(), "r")) {
+	        fclose(file);
+	        // return true;
+	    } else {
+	    	// Create a table
+	    	handleQuery ("quotes:([]ticker:`symbol$();date:`date$();high:`real$();low:`real$();adj_close:`real$();close:`real$();open:`real$())");
+	    	handleQuery (querySaveQuotes);
+	    	
+	        // return false;
+	    } 
+	
+	   
+	   handleQuery(queryLoadQuotes);
+	   handleQuery ("`ticker`date xkey `quotes");
+	   handleQuery ("select from quotes");
+	}
+public:
+	KDB(char * ticker_){
+		ticker = ticker_;
+		filenameQuotes = "/home/acer/github/kdbLearn/quotes/"+ticker+".csv";
+		{
+			std::string q= "`:" + filenameQuotes +" 0:.h.tx[`csv;"+ticker+"quotes]";
+			querySaveQuotes = (char *)malloc(q.size()+1);
+			bzero(querySaveQuotes, q.size()+1);
+			strcpy(querySaveQuotes, q.c_str());
+			// std::cout<<"[KDB()] querySaveQuotes\t"<<querySaveQuotes<<"\r\n";
+		}
+		{
+			std::string q= ticker+"quotes:(\"DSEEE\";enlist\",\")0:`:" +filenameQuotes ;
+			queryLoadQuotes = (char *)malloc(q.size()+1);
+			bzero(queryLoadQuotes, q.size()+1);
+			strcpy(queryLoadQuotes, q.c_str());
+			// std::cout<<"[KDB()] queryLoadQuotes\t"<<queryLoadQuotes<<"\r\n";
+		}
+		if (!kcon.connect(HOST_ADDR, HOST_PORT))
 		{std::cout<<"EXIT_FAILURE\t" <<EXIT_FAILURE<<"\r\n";}
         
        handle = kcon.handle();
 
 	   
-	   handleQuery ("quotes:([]ticker:`symbol$();date:`date$();high:`real$();low:`real$();adj_close:`real$();close:`real$();open:`real$())");
-	   handleQuery ("`:/home/acer/github/kdbLearn/quotes.csv 0:.h.tx[`csv;quotes]");
-	   handleQuery("quotes:(\"DSEEE\";enlist\",\")0:`:/home/acer/github/kdbLearn/quotes.csv");
-	   handleQuery ("`ticker`date xkey `quotes");
-	   handleQuery ("select from quotes");
+		// queryHandleOldVersion();
+
+		testCodyFengKdb();
 	   
 	    ///----------------------
 	}
 	
 	~KDB(){
+		// char q[] = querySaveQuotes.c_str();
+		// https://stackoverflow.com/questions/43631415/using-shared-ptr-with-char
+		// std::shared_ptr<char> q(new char[querySaveQuotes.size()], std::default_delete<char[]>());
+		std::cout<<"[~KDB()] querySaveQuotes\t"<<querySaveQuotes<<"\r\n";
+		  handleQuery (querySaveQuotes);
+		  free(querySaveQuotes);
+		  free(queryLoadQuotes);
 		  kclose(handle);
-		}
+	}
 
 public:
-	int json2kdb(std::string s, std::string ticker){
+	int json2kdb(std::string s){
 	  // std::cout<< "=====s\t"<< s<<"\t\n";
 	  /// kdb
 	   
@@ -163,7 +325,7 @@ public:
 
 	//-----------
 
-	  testCodyFengKdb();
+	  
 	    return EXIT_SUCCESS;
 	    
 	}

@@ -19,8 +19,12 @@ namespace kdb {
         kK(res_->k)[0];// no problem!!
         std::cout<<"[Table::table] yezheng!!!!!!\r\n";
         n_cols_ = kK(res_->k)[0]->n;// segmentation fault!!
-        
+
+        std::cout<<"[Table::table] kK(res_->k)[0]->n; "<< n_cols_ << " yezheng!!!!!!\r\n";
         n_rows_ = kK(kK(res_->k)[1])[0]->n; // segmentation fault!!
+        std::cout<<"[Table::table] kK(kK(res_->k)[1])[0]->n;"<<n_rows_ <<" yezheng!!!!!!\r\n";
+        
+        
         
         if (res_) {
             r1(res_);

@@ -106,8 +106,8 @@ while (std::getline(nameFileout, buffer))
 {item_name+=buffer;
     // std::cout << item_name;
 }
-KDB kdb;
-kdb.json2kdb(item_name, "AAPL");
+KDB kdb("AAPL");
+kdb.json2kdb(item_name);
 nameFileout.close();
 
 
