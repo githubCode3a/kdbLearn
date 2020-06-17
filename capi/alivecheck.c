@@ -1,5 +1,6 @@
 // https://code.kx.com/q/wp/capi/
 // clear && printf '\e[3J';  gcc -DKXVER=3 -o alivecheck alivecheck.c c.o -lpthread
+// clear && printf '\e[3J';  g++ -DKXVER=3 -o alivecheck alivecheck.c c.o -lpthread
 //-----------------
 // The c.o header file is required for compilation.
 // https://code.kx.com/q/interfaces/c-client-for-q/

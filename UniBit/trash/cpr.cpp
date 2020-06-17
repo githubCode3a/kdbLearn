@@ -11,7 +11,7 @@
 #include <cpr/cpr.h>
 
 int main(int argc, char** argv) {
-    auto r = cpr::Get(cpr::Url{"https://api.github.com/repos/whoshuu/cpr/contributors"},
+    auto r = cpr::Get(cpr::Url{"https://api.unibit.ai/api/realtimestock/AAPL?size=10&AccessKey=demo"},
                       cpr::Authentication{"user", "pass"},
                       cpr::Parameters{{"anon", "true"}, {"key", "value"}});
     r.status_code;                  // 200
