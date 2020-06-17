@@ -13,7 +13,7 @@
 #include "../external/k.h"
 #include "kdb_result.h"
 #include "kdb_connector.h"
-
+#include <iostream>
 namespace kdb {
 
     Connector::~Connector() {
@@ -64,14 +64,21 @@ namespace kdb {
             return Result(nullptr);
         } else {
             fprintf(stdout, "[kdb+][sync] %s\n", msg);
+            std::cout<<"[Connector::sync] BEFORE const_cast<const S>(msg)!!! yezheng!!!!!!\r\n";
+            const_cast<const S>(msg);
+            k(hdl_, const_cast<const S>(msg), (K)0);
+            std::cout<<"[Connector::sync] AFTER const_cast<const S>(msg)!!! yezheng!!!!!!\r\n";
             K res = k(hdl_, const_cast<const S>(msg), (K)0);
+            
             if (nullptr == res) {
                 fprintf(stderr, "[kdb+] Network error. Failed to communicate with server.\n");
             } else if (-128 == res->t) {
                 fprintf(stderr, "[kdb+] kdb+ syntax/command error : %s\n", res->s);
+
                 r0(res);   // Free memory if error as there is nothing useful in it
                 res = nullptr;
             }
+            // std::cout<<"[Connector::sync] yezheng!!!!!!\r\n";
             return Result(res, false);
         }
     }

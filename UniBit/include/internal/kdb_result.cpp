@@ -8,13 +8,15 @@
 
 #include "kdb_table.h"
 #include "kdb_result.h"
-
+#include<iostream>
 namespace kdb {
     Result::Result(K res, bool inc_ref_count) {
         res_ = res;
+
         if (inc_ref_count && res_) {
             r1(res_);
         }
+        // std::cout<<"[Result::Result] yezheng!!!!!!\r\n";
     }
 
     Result::~Result() {
@@ -53,6 +55,7 @@ namespace kdb {
     }
 
     Table Result::get_table() const {
+        std::cout<<"[Result::table] yezheng!!!!!!\r\n";
         return Table(*this);
     }
 

@@ -58,12 +58,13 @@ namespace kdb {
          */
         Result receive(int timeout=1000);
         
+    I handle(){return hdl_;}//yezheng
 
     private:
         std::string host_;
         std::string usr_pwd_;
         int port_ = 0;
-        int hdl_ = 0;
+        I hdl_ = 0;
     };
 }
 

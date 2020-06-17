@@ -8,11 +8,20 @@
 
 #include "kdb_type.h"
 #include "kdb_table.h"
-
+#include<iostream>
 namespace kdb {
-    Table::Table(const Result &r) : res_(r.res_),
-                                    n_rows_(kK(kK(res_->k)[1])[0]->n),
-                                    n_cols_(kK(res_->k)[0]->n) {
+    Table::Table(const Result &r) //: res_(r.res_),
+                                   // n_rows_(kK(kK(res_->k)[1])[0]->n),
+                                   // n_cols_(kK(res_->k)[0]->n) 
+    {
+
+        res_ = r.res_;                                
+        kK(res_->k)[0];// no problem!!
+        std::cout<<"[Table::table] yezheng!!!!!!\r\n";
+        n_cols_ = kK(res_->k)[0]->n;// segmentation fault!!
+        
+        n_rows_ = kK(kK(res_->k)[1])[0]->n; // segmentation fault!!
+        
         if (res_) {
             r1(res_);
         }

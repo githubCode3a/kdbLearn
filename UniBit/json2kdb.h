@@ -6,9 +6,12 @@
 #include <nlohmann/json.hpp> 
 #include "common.h"
 #include "include/kdb_cpp.h"
+#define HOST_ADDR "127.0.0.1"
+#define HOST_PORT 12345
 class KDB{
 	private:
 	 I handle;  // typedef int  I; // https://code.kx.com/q/wp/capi/
+	 kdb::Connector kcon;
 	int handleQuery(char* query){
 		K result= k(handle, query, (K)0);
 	   if(isRemoteErr(result)) {
@@ -28,14 +31,15 @@ class KDB{
 	}
 	int testCodyFengKdb(){
 	std::cout<<"testCodyFengKdb-------------\r\n";
-		kdb::Connector kcon;
-    if (!kcon.connect("127.0.0.1", 12345))
-        return -1;
+	// if (!kcon.connect(HOST_ADDR, HOST_PORT))// do not reconnect!!
+ //        return -1;
+    
     
     // Create a table
     kcon.sync("tbl_test:([]col1:1 2 3 4;col2:1.1 2.2 3.3 4.4f;col3:`first`second`third`fourth)");
 
-    kdb::Result res = kcon.sync("select from tbl_test");
+    // kdb::Result res = kcon.sync("select from tbl_test");
+    kdb::Result res = kcon.sync("select from quotes");
     kdb::Table tbl = res.get_table();
 
     // Read header
@@ -70,19 +74,19 @@ class KDB{
 	}
 public:
 	KDB(){
-		
-	    I portnumber= 12345;
-	    S hostname= "localhost";
-	    S usernamePassword= "kdb:pass";
+		// KDB tutorial old fashioned!! // https://code.kx.com/q/interfaces/capiref/
+	    // I portnumber= HOST_PORT;
+	    // S hostname= HOST_ADDR;
+	    // S usernamePassword= "kdb:pass";
 	    
 
-	    handle= khpu(hostname, portnumber,usernamePassword);
-	    if(!handleOk(handle))
-	        {std::cout<<"EXIT_FAILURE\t" <<EXIT_FAILURE<<"\r\n";}
-	    printf("Handle value is %d\n", handle);
+	    // handle= khpu(hostname, portnumber,usernamePassword);
+	    // if(!handleOk(handle))
+	    //     {std::cout<<"EXIT_FAILURE\t" <<EXIT_FAILURE<<"\r\n";}
+	    // printf("Handle value is %d\n", handle);
 
 
-	    handleQuery ("2.0+3.0");
+	    // handleQuery ("2.0+3.0");
 	    
 // 	"date" : "2020-05-01",
 	  //     "volume" : 59350841,
@@ -92,6 +96,11 @@ public:
 	  //     "close" : 289.07,
 	  //     "open" : 286.25
 	    ///---------------------
+	if (!kcon.connect(HOST_ADDR, HOST_PORT))
+		{std::cout<<"EXIT_FAILURE\t" <<EXIT_FAILURE<<"\r\n";}
+        
+       handle = kcon.handle();
+
 	   
 	   handleQuery ("quotes:([]ticker:`symbol$();date:`date$();high:`real$();low:`real$();adj_close:`real$();close:`real$();open:`real$())");
 	   handleQuery ("`:/home/acer/github/kdbLearn/quotes.csv 0:.h.tx[`csv;quotes]");
