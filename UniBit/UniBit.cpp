@@ -1,4 +1,4 @@
-// clear && printf '\e[3J';  g++ -std=c++11 -o UniBit UniBit.cpp c.o -lpthread -lboost_system -lcrypto -lssl -lcpprest; ./UniBit
+// clear && printf '\e[3J';  g++ -DKXVER=3 -o -std=c++11 -o UniBit UniBit.cpp c.o -lpthread -lboost_system -lcrypto -lssl -lcpprest; ./UniBit
 // http://www.atakansarioglu.com/easy-quick-start-cplusplus-rest-client-example-cpprest-tutorial/
 
 
@@ -8,6 +8,7 @@
 #include <cpprest/http_client.h> // sudo apt install libcpprest-dev
 #include <cpprest/filestream.h>
 #include <cpprest/uri.h>
+#include "common.h"
 // #include <cpprest/json.h>
 // #include <sstream>
 using namespace concurrency::streams; 
@@ -15,7 +16,30 @@ using namespace utility;
 using namespace web;
 using namespace web::http;
 using namespace web::http::client;
+int f(){
+  /// kdb
+   I handle;  // typedef int  I; // https://code.kx.com/q/wp/capi/
+    I portnumber= 12345;
+    S hostname= "localhost";
+    S usernamePassword= "kdb:pass";
+    K result;
 
+    handle= khpu(hostname, portnumber,usernamePassword);
+    if(!handleOk(handle))
+        return EXIT_FAILURE;
+    printf("Handle value is %d\n", handle);
+    result= k(handle, "2.0+3.0", (K)0);
+    if(isRemoteErr(result)) {
+        kclose(handle);
+        return EXIT_FAILURE;
+    }
+    printf("Value returned is %f\n", result->f);
+
+    r0(result);
+    kclose(handle);
+    return EXIT_SUCCESS;
+
+}
  
 int main() {
   // Create a file stream to write the received file into it.
@@ -95,27 +119,6 @@ int main() {
 
 
 
-/// kdb
-   I handle;  // typedef int  I; // https://code.kx.com/q/wp/capi/
-    I portnumber= 12345;
-    S hostname= "localhost";
-    S usernamePassword= "kdb:pass";
-    K result;
-
-    handle= khpu(hostname, portnumber,usernamePassword);
-    if(!handleOk(handle))
-        return EXIT_FAILURE;
-    printf("Handle value is %d\n", handle);
-    result= k(handle, "2.0+3.0", (K)0);
-    if(isRemoteErr(result)) {
-        kclose(handle);
-        return EXIT_FAILURE;
-    }
-    printf("Value returned is %f\n", result->f);
-
-    r0(result);
-    kclose(handle);
-    return EXIT_SUCCESS;
 
   return 0;
 

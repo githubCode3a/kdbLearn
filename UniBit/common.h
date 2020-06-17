@@ -1,4 +1,6 @@
 // https://code.kx.com/q/wp/capi/
+#ifndef COMMON_H
+#define COMMON_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -37,3 +39,4 @@ I handleOk(I handle)
 }
 
 
+#endif

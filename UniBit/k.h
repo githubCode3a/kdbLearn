@@ -103,7 +103,7 @@ extern double log(double);
 #define R return
 #define Z static
 #define P(x,y) {if(x)R(y);}
-#define U(x) P(!(x),0)
+#define Ukdb(x) P(!(x),0) // yezheng　#define U(x) P(!(x),0)　－－ U(x)  has conflict with cpprest!!
 #define SW switch
 #define CS(n,x)	case n:x;break;
 #define CD default
