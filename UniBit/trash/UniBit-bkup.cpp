@@ -76,14 +76,14 @@ int main() {
   
   });
  
-  // // Wait for the concurrent tasks to finish.
-  // try {
-  //   while (!requestTask.is_done()) { 
-  //   //  std::cout << ".";  //yezheng: comment out!!!
-  //   }
-  // } catch (const std::exception &e) {
-  //   printf("Error exception:%s\n", e.what());
-  // }
+  // Wait for the concurrent tasks to finish.
+  try {
+    while (!requestTask.is_done()) { 
+    //  std::cout << ".";  //yezheng: comment out!!!
+    }
+  } catch (const std::exception &e) {
+    printf("Error exception:%s\n", e.what());
+  }
 
 
 
