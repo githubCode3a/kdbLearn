@@ -1,4 +1,4 @@
-This repository shows how to import JSON object (from [UniBit](https://unibit.ai) API request) into kdb+ (via c++, pyq).
+This repository imports JSON object (from [UniBit](https://unibit.ai) API request) into kdb+ (via c++, pyq).
 
 ```./q/l64/q -p 12345```
 
@@ -15,7 +15,7 @@ Log information can be checked via [```UniBit/log.log```](UniBit/log.log) (inter
 ---
 Prerequisites
 
-(1) You have to install ```nlohmann/json.hpp``` and ```cpprest``` (Microsoft).
+(1) install ```nlohmann/json.hpp``` and ```cpprest``` (Microsoft).
 
 (2) Ubuntu (```sudo apt install  nlohmann-json3-dev libcpprest-dev```) is recommended rather than Mac OSX (although it has ```brew install nlohmann_json cpprestsdk```).
 
