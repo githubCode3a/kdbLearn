@@ -1,4 +1,4 @@
-This repository shows how to import JSON object (from [UniBit](https://unibit.ai) API request) into kdb+ (via c++, pyq).
+This repository shows how to import JSON object (from [UniBit](https://unibit.ai) API request; used to interview with UniBit CEO Vincent Jiang back Jan 16th 2020 :) ) into kdb+ (via c++, pyq).
 
 ```./q/l64/q -p 12345```
 
