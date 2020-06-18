@@ -5,3 +5,5 @@ clear && printf '\e[3J'; rm UniBit; g++ -DKXVER=3 -o -std=c++11 -o UniBit includ
 
 
 files are in quotes/{ticker}.csv
+
+log information can be checked via UniBit/log.log (intermittent logs).
