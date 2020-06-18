@@ -8,6 +8,10 @@
 #include "include/kdb_cpp.h"
 #define HOST_ADDR "127.0.0.1"
 #define HOST_PORT 12345
+
+#include <boost/algorithm/string.hpp>
+
+
 class KDB{
 	private:
 	 I handle;  // typedef int  I; // https://code.kx.com/q/wp/capi/
@@ -126,7 +130,23 @@ class KDB{
 	//     }
 	    
 	// }
-	int testCodyFengKdb(){
+	int connectLoadTickerCSV(){
+		 if (false) { // FILE *file = fopen(filenameQuotes.c_str(), "r")
+        // fclose(file);
+        // return true;
+    } else {
+    	// Create a table
+ 
+		// string2charStarMalloc(ticker+ "quotes:([]date:`date$();high:`real$();low:`real$();adj_close:`real$();close:`real$();open:`real$())",q);	
+		string2charStarMalloc(ticker+ "quotes:([]date:`date$();volume:`real$();high:`real$();low:`real$();adj_close:`real$();close:`real$();open:`real$())");	
+		
+
+        kcon.sync(querySaveQuotes);
+    } 
+    string2charStarMalloc("`date xkey `"+ticker+"quotes");
+
+	}
+	int testCodyFengKdb2(){
 	std::cout<<"testCodyFengKdb-------------\r\n";
 	// if (!kcon.connect(HOST_ADDR, HOST_PORT))// do not reconnect!!
  //        return -1;
@@ -156,9 +176,9 @@ class KDB{
 		// AAPLquotes upsert ([2000.01.01]high:0.0e;low:0.0e;adj_close:0.0e;close:0.0e;open:0.0e)
 		// http://www.timestored.com/kdb-guides/errors/rank
 		// 'rank
-	    string2charStarMalloc("`"+ticker+"quotes upsert (2000.01.01;0.0e;0.0e;0.0e;0.0e;0.0e)");
+	    // string2charStarMalloc("`"+ticker+"quotes upsert (2000.01.01;0.0e;0.0e;0.0e;0.0e;0.0e)");
 
-
+		kcon.sync(queryLoadQuotes);
         kcon.sync(querySaveQuotes);
     } 
 
@@ -175,7 +195,7 @@ class KDB{
     // kcon.sync("tbl_test:([]date:`2000.01.01:high:0.0e;low:0.0e)");
     kcon.sync(queryLoadQuotes);
 
-	string2charStarMalloc("`date xkey `"+ticker+"quotes");	
+	// string2charStarMalloc("`date xkey `"+ticker+"quotes");	// if I set this one, I cannot getTable!!!!!
     
 	// {
 	// 	char *q;
@@ -261,7 +281,7 @@ public:
 	   
 		// queryHandleOldVersion();
 
-		testCodyFengKdb();
+		// testCodyFengKdb();
 	   
 	    ///----------------------
 	}
@@ -270,8 +290,9 @@ public:
 		// char q[] = querySaveQuotes.c_str();
 		// https://stackoverflow.com/questions/43631415/using-shared-ptr-with-char
 		// std::shared_ptr<char> q(new char[querySaveQuotes.size()], std::default_delete<char[]>());
-		std::cout<<"[~KDB()] querySaveQuotes\t"<<querySaveQuotes<<"\r\n";
+		// std::cout<<"[~KDB()] querySaveQuotes\t"<<querySaveQuotes<<"\r\n";
 		  handleQuery (querySaveQuotes);
+		  kcon.sync(querySaveQuotes);
 		  free(querySaveQuotes);
 		  free(queryLoadQuotes);
 		  kclose(handle);
@@ -279,6 +300,8 @@ public:
 
 public:
 	int json2kdb(std::string s){
+
+		connectLoadTickerCSV();
 	  // std::cout<< "=====s\t"<< s<<"\t\n";
 	  /// kdb
 	   
@@ -292,14 +315,21 @@ public:
 
 	    // r0(result);
 	    nlohmann::json j;
+
 		try{
 			// j = nlohmann::json::parse("{ \"happy\": true, \"pi\": 3.141 }");
 			j = nlohmann::json::parse(s)["result_data"][ticker];
 			// https://github.com/nlohmann/json/issues/1561
-			std::string query = "`quotes upsert ([s:";// + it["ticker"]+"`"it["date"]\
-			+"]";
+			std::string query = "`"+ticker+"quotes upsert (",//I have to have "`"+
+			date = "", volume ="", high= "", low= "",adj_close="",close = "", open="";
+		// AAPLquotes upsert([date:2020.05.01]59350841;299.0;0.0;0.0;0.0;0.0) /// NOT WORK
+		// AAPLquotes upsert(2020.05.01 ;59350841e ;299.0e ;0.0e ;0.0e ;0.0e ;0.0e )
+			// AAPLquotes upsert ([date:2020.05.01 2020.04.30]volume:59350841 37537233e;high:299.0 294.52e;low:285.85 288.36e;adj_close:289.07 293.8e;close:289.07 293.8e;open:286.25 289.96e)
+			int cnt =0;
 			for (auto it : j)
 			{
+				cnt++;
+				// if (3 == cnt){break;}
 	   // 	"date" : "2020-05-01",
 	  //     "volume" : 59350841,
 	  //     "high" : 299.0,
@@ -307,21 +337,41 @@ public:
 	  //     "adj_close" : 289.07,
 	  //     "close" : 289.07,
 	  //     "open" : 286.25
-				// std::cout << it["date"] << '\t' << it["volume"] << '\t' << it["high"]
-				// << '\t' << it["low"]<< '\t' << it["adj_close"]<< '\t' << it["close"] << '\t' << it["open"]
-				// << '\n';
+			// https://github.com/nlohmann/json/issues/1061
+			// std::cout << it["date"] << '\t' << it["volume"] << '\t' << it["high"]
+			// << '\t' << it["low"]<< '\t' << it["adj_close"]<< '\t' << it["close"] << '\t' << it["open"]
+			// << '\n';
+			std::string d = it["date"].dump();
+			d = d.substr(1, d.size()-2);
 
-			// query+= ticker+""it["date"]+":"+it["volume"]+" "+
-			// +it["high"]+" "+
-			// +it["low"]+"e;"+
-			// {resp.close}e;{resp.close}e)"
+				// https://www.fluentcpp.com/2017/04/21/how-to-split-a-string-in-c/
+
+			std::vector<std::string> yearMonthDay;
+
+		 
+			boost::split(yearMonthDay, d, [](char c){return c == '-';});
+			// std::cout<<"yearMonthDay.size()\t" <<yearMonthDay.size()<<"\r\n";
+			d = yearMonthDay[0]+"."+ yearMonthDay[1]+"."+ yearMonthDay[2];
+			date= date+d+" ";
+			volume= volume+it["volume"].dump()+" ";
+			high= high+it["high"].dump()+" ";
+			low= low+it["low"].dump()+" ";
+			adj_close= adj_close+it["adj_close"].dump()+" ";
+			close= close+it["close"].dump()+" ";
+			open= open+it["open"].dump()+" ";
 			}
 
-		query+=")";
-
+		query=query +"[date:"+ date.substr(0,date.size()-1)+"]volume:"+ volume.substr(0,volume.size()-1)+"e;high:"+ high.substr(0,high.size()-1)
+		+"e;low:"+ low.substr(0,low.size()-1) +"e;adj_close:"+ adj_close.substr(0,adj_close.size()-1)
+		+"e;close:"+ close.substr(0,close.size()-1)
+		+"e;open:"+open.substr(0,open.size()-1)+"e)";
+		 // std::cout<<"query UPSERT\t"<<query<<"\r\n";
+		string2charStarMalloc(query);
 		}catch(...){
 			std::cout<<"ERROR nlohmann::json\r\n";
 		}
+
+		kcon.sync(querySaveQuotes);
 
 	//-----------
 
