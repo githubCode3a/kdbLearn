@@ -1,4 +1,4 @@
-// clear && printf '\e[3J'; rm UniBit; g++ -DKXVER=3 -o -std=c++11 -o UniBit include/internal/*.cpp UniBit.cpp c.o -lpthread -lboost_system -lcrypto -lssl -lcpprest; ./UniBit
+// clear && printf '\e[3J'; rm UniBit; g++ -DKXVER=3 -o -std=c++11 -o UniBit include/internal/*.cpp UniBit.cpp c.o -lpthread -lboost_system -lcrypto -lssl -lcpprest; ./UniBit >> log.log
 // http://www.atakansarioglu.com/easy-quick-start-cplusplus-rest-client-example-cpprest-tutorial/
 
 //***C++11 Style:***
@@ -42,7 +42,7 @@ tickers.push_back(t);
   std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
   std::vector<std::string>::iterator it = tickers.begin();
   for(; it != tickers.end(); ++it) {
-    if( 0== (*it).compare(std::string("CAPR") )){
+    if( 0== (*it).compare(std::string("FTSM") )){
       begin = std::chrono::steady_clock::now();
       done++; 
       it++;
