@@ -9,12 +9,12 @@ using namespace web::http::client;
 
 class UniBitapi{
 	private:
-		std::string sticker;
+		std::string ticker;
 		std::string jsonStr;
 	public:
 
-	UniBitapi(char *sticker_){
-		sticker = sticker_;
+	UniBitapi(char *ticker_){
+		ticker = ticker_;
 	}
 	std::string getJsonStr(){
 			  // Create a file stream to write the received file into it.
@@ -30,7 +30,7 @@ class UniBitapi{
 		 
 		    // Create http_client to send the request.
 		    http_client client(U("https://api.unibit.ai"));
-		 // https://api.unibit.ai/v2/stock/historical?tickers=AAPL&interval=1&startDate=2020-01-01&endDate=2020-05-01&dataType=json&accessKey=JApS-XgN6FCqejbOq9X3dSBFiHj83-FM
+		 // https://api.unibit.ai/v2/stock/historical?tickers=AAPL&interval=1&startDate=2020-01-01&endDate=2020-05-01&dataType=json&accessKey=
 		    //https://api.unibit.ai/v2/stock/historical?tickers=AAPL&interval=1&startDate=2020-01-01&endDate=2020-05-01&dataType=json&accessKey=1uQEaW_HL4hT4eDiAOUv9U-1D4dGnKjA
 
 		    // Build request URI and start the request.
@@ -38,14 +38,20 @@ class UniBitapi{
 		    // https://api.unibit.ai/api/realtimestock/AAPL?size=10&AccessKey=demo
 
 		    std::string mess = uri_builder(U("v2")).append_path(U("stock")).append_path(U("historical"))
-		      .append_query(U("tickers"), U("AAPL"))// https://www.drdobbs.com/cloud/using-the-microsoft-c-rest-sdk/240164544?pgno=2
+		      .append_query(U("tickers"), U(ticker))// https://www.drdobbs.com/cloud/using-the-microsoft-c-rest-sdk/240164544?pgno=2
 		      .append_query(U("interval"), U("1")) 
 		      .append_query(U("startDate"), U("2020-01-01")) 
-		      .append_query(U("endDate"), U("2020-01-07")) 
+		      .append_query(U("endDate"), U("2020-01-31")) 
 		      .append_query(U("dataType"), U("json")) 
-		      .append_query(U("accessKey"), U("1uQEaW_HL4hT4eDiAOUv9U-1D4dGnKjA")) 
+		      .append_query(U("accessKey"), U("wmyObJNSU-l_8b-myUju6Pqhoh08gmjo"))
+		      // RsjvEpx--EWhP77HxToylcMkCPxtF6UA	yezhengli9@outlook.com
+		      // 1uQEaW_HL4hT4eDiAOUv9U-1D4dGnKjA	yezhenglimr9@gmail.com
+		      // JApS-XgN6FCqejbOq9X3dSBFiHj83-FM	yezheng@sas.upenn.edu
+		      // fprsJwbgPXugCTPAfubyqpbJL6EDIXt4	yezheng@seas.upenn.edu
+		      // Of-R-Z6k3M_yx1RcgnxJZunhulF63iBU	yezhengintern@gmail.com
+		      //wmyObJNSU-l_8b-myUju6Pqhoh08gmjo	mr9@yezhengli@gmail.com
 		      .to_string();
-		    std::cout<<"mess\t" <<mess<< '\n';
+		    std::cout<<"message\t" <<mess<< '\n';
 		    return client.request(methods::GET, mess);
 		  })
 		 
@@ -67,15 +73,16 @@ class UniBitapi{
 		      auto bodyStream = response.body();
 		        concurrency::streams::stringstreambuf sbuffer;//streams::stringstreambuf sbuffer; // error: ‘streams’ has not been declared
 
-		        auto& target = sbuffer.collection();
+		      
 		 
 		        bodyStream.read_to_end(sbuffer).get();
 		        // std::cout<< "=====sbuffer\t"<< sbuffer<<"\t\n";
 		        stream.str(std::wstring());
-		        // std::cout<<"=========target.c_str()\t"<<target.c_str()<<"\r\n";
-		        // stream << L"Response body: " << target.c_str();
-		        std::wcout << stream.str(); // std::wcout << stream.str();
-		        jsonStr = target.c_str();
+		        jsonStr = sbuffer.collection();
+		        // std::cout<<"=========jsonStr.c_str()\t"<<jsonStr.c_str()<<"\r\n";
+		        // stream << L"Response body: " << jsonStr.c_str();
+		        // std::wcout << stream.str(); // std::wcout << stream.str();
+		        // jsonStr = target.c_str();
 		 
 		    // Close the file.
 		    return fileStream->close();

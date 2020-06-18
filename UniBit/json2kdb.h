@@ -19,23 +19,23 @@ class KDB{
 	 std::string filenameQuotes, ticker;
 	 char* querySaveQuotes, *queryLoadQuotes;
 
-	int handleQuery(char* query){
-		K result= k(handle, query, (K)0);
-	   if(isRemoteErr(result)) {
-	        kclose(handle);
-	        std::cout<<"EXIT_FAILURE\t" <<EXIT_FAILURE<<"\r\n";
-	        return EXIT_FAILURE;
-	    }
+	// int handleQuery(char* query){
+	// 	K result= k(handle, query, (K)0);
+	//    if(isRemoteErr(result)) {
+	//         kclose(handle);
+	//         std::cout<<"EXIT_FAILURE\t" <<EXIT_FAILURE<<"\r\n";
+	//         return EXIT_FAILURE;
+	//     }
 	   
-	    r0(result);
-	    r1(result);
-	    printf("Value returned is %f\n", result->f);
-	   printf("result->i\t%d\n",result->i);
-	   printf("result->k\t%d\n",result->k);
+	//     r0(result);
+	//     r1(result);
+	//     printf("Value returned is %f\n", result->f);
+	//    printf("result->i\t%d\n",result->i);
+	//    printf("result->k\t%d\n",result->k);
 
-	   return EXIT_SUCCESS;
+	//    return EXIT_SUCCESS;
 
-	}
+	// }
 	int string2charStarMalloc(const std::string &qStr){
 
 		
@@ -131,8 +131,8 @@ class KDB{
 	    
 	// }
 	int connectLoadTickerCSV(){
-		 if (false) { // FILE *file = fopen(filenameQuotes.c_str(), "r")
-        // fclose(file);
+		 if (FILE *file = fopen(filenameQuotes.c_str(), "r")) { // 
+        fclose(file);
         // return true;
     } else {
     	// Create a table
@@ -215,46 +215,46 @@ class KDB{
 	    	free(querySelect);
 	    }
 	}
-	int queryHandleOldVersion(){
-		// KDB tutorial old fashioned!! // https://code.kx.com/q/interfaces/capiref/
-	    // I portnumber= HOST_PORT;
-	    // S hostname= HOST_ADDR;
-	    // S usernamePassword= "kdb:pass";
+// 	int queryHandleOldVersion(){
+// 		// KDB tutorial old fashioned!! // https://code.kx.com/q/interfaces/capiref/
+// 	    // I portnumber= HOST_PORT;
+// 	    // S hostname= HOST_ADDR;
+// 	    // S usernamePassword= "kdb:pass";
 	    
 
-	    // handle= khpu(hostname, portnumber,usernamePassword);
-	    // if(!handleOk(handle))
-	    //     {std::cout<<"EXIT_FAILURE\t" <<EXIT_FAILURE<<"\r\n";}
-	    // printf("Handle value is %d\n", handle);
+// 	    // handle= khpu(hostname, portnumber,usernamePassword);
+// 	    // if(!handleOk(handle))
+// 	    //     {std::cout<<"EXIT_FAILURE\t" <<EXIT_FAILURE<<"\r\n";}
+// 	    // printf("Handle value is %d\n", handle);
 
 
-	    // handleQuery ("2.0+3.0");
+// 	    // handleQuery ("2.0+3.0");
 	    
-// 	"date" : "2020-05-01",
-	  //     "volume" : 59350841,
-	  //     "high" : 299.0,
-	  //     "low" : 285.85,
-	  //     "adj_close" : 289.07,
-	  //     "close" : 289.07,
-	  //     "open" : 286.25
-	    ///---------------------
+// // 	"date" : "2020-05-01",
+// 	  //     "volume" : 59350841,
+// 	  //     "high" : 299.0,
+// 	  //     "low" : 285.85,
+// 	  //     "adj_close" : 289.07,
+// 	  //     "close" : 289.07,
+// 	  //     "open" : 286.25
+// 	    ///---------------------
 
-	    if (FILE *file = fopen(filenameQuotes.c_str(), "r")) {
-	        fclose(file);
-	        // return true;
-	    } else {
-	    	// Create a table
-	    	handleQuery ("quotes:([]ticker:`symbol$();date:`date$();high:`real$();low:`real$();adj_close:`real$();close:`real$();open:`real$())");
-	    	handleQuery (querySaveQuotes);
+// 	    if (FILE *file = fopen(filenameQuotes.c_str(), "r")) {
+// 	        fclose(file);
+// 	        // return true;
+// 	    } else {
+// 	    	// Create a table
+// 	    	handleQuery ("quotes:([]ticker:`symbol$();date:`date$();high:`real$();low:`real$();adj_close:`real$();close:`real$();open:`real$())");
+// 	    	handleQuery (querySaveQuotes);
 	    	
-	        // return false;
-	    } 
+// 	        // return false;
+// 	    } 
 	
 	   
-	   handleQuery(queryLoadQuotes);
-	   handleQuery ("`ticker`date xkey `quotes");
-	   handleQuery ("select from quotes");
-	}
+// 	   handleQuery(queryLoadQuotes);
+// 	   handleQuery ("`ticker`date xkey `quotes");
+// 	   handleQuery ("select from quotes");
+// 	}
 public:
 	KDB(char * ticker_){
 		ticker = ticker_;
@@ -291,7 +291,7 @@ public:
 		// https://stackoverflow.com/questions/43631415/using-shared-ptr-with-char
 		// std::shared_ptr<char> q(new char[querySaveQuotes.size()], std::default_delete<char[]>());
 		// std::cout<<"[~KDB()] querySaveQuotes\t"<<querySaveQuotes<<"\r\n";
-		  handleQuery (querySaveQuotes);
+		  // handleQuery (querySaveQuotes);
 		  kcon.sync(querySaveQuotes);
 		  free(querySaveQuotes);
 		  free(queryLoadQuotes);
@@ -368,7 +368,7 @@ public:
 		 // std::cout<<"query UPSERT\t"<<query<<"\r\n";
 		string2charStarMalloc(query);
 		}catch(...){
-			std::cout<<"ERROR nlohmann::json\r\n";
+			std::cout<<	"ERROR nlohmann::json\r\n";
 		}
 
 		kcon.sync(querySaveQuotes);

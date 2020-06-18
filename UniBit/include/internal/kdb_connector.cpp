@@ -64,10 +64,10 @@ namespace kdb {
             return Result(nullptr);
         } else {
             fprintf(stdout, "[kdb+][sync] %s\n", msg);
-            std::cout<<"[Connector::sync] BEFORE const_cast<const S>(msg)!!! yezheng!!!!!!\r\n";
+            // std::cout<<"[Connector::sync] BEFORE const_cast<const S>(msg)!!! yezheng!!!!!!\r\n";
             const_cast<const S>(msg);
             k(hdl_, const_cast<const S>(msg), (K)0);
-            std::cout<<"[Connector::sync] AFTER const_cast<const S>(msg)!!! yezheng!!!!!!\r\n";
+            // std::cout<<"[Connector::sync] AFTER const_cast<const S>(msg)!!! yezheng!!!!!!\r\n";
             K res = k(hdl_, const_cast<const S>(msg), (K)0);
             
             if (nullptr == res) {

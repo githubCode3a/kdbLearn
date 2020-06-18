@@ -55,7 +55,7 @@ namespace kdb {
     }
 
     Table Result::get_table() const {
-        std::cout<<"[Result::table] yezheng!!!!!!\r\n";
+        // std::cout<<"[Result::table] yezheng!!!!!!\r\n";
         return Table(*this);
     }
 

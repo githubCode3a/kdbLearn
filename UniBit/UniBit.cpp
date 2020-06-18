@@ -2,6 +2,9 @@
 // clear && printf '\e[3J'; rm UniBit; g++ -DKXVER=3 -o -std=c++11 -o UniBit include/internal/*.cpp UniBit.cpp c.o -lpthread -lboost_system -lcrypto -lssl -lcpprest; ./UniBit
 // http://www.atakansarioglu.com/easy-quick-start-cplusplus-rest-client-example-cpprest-tutorial/
 
+//***C++11 Style:***
+#include <chrono>
+
 
 
 
@@ -16,6 +19,7 @@
 // #include <sstream>
 #include<vector>
 int main() {
+
   std::vector<std::string> tickers, failedTickers;
   std::string buffer;
   std::ifstream infile;
@@ -33,7 +37,25 @@ tickers.push_back(t);
   infile.close();
 // return 0;
   int done = 0;
-  for (std::string tmp: tickers){
+  // http://www.cplusplus.com/reference/algorithm/sort/
+  std::sort(tickers.begin(),tickers.end());
+  // https://stackoverflow.com/questions/2808398/easily-measure-elapsed-time 
+  std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
+  std::vector<std::string>::iterator it = tickers.begin();
+  for(; it != tickers.end(); ++it) {
+    if( 0== (*it).compare(std::string("CAPR") )){
+      begin = std::chrono::steady_clock::now();
+      done++; 
+      it++;
+      break;
+    }
+    done++; 
+    
+    /* std::cout << *it; ... */
+  }
+
+  for (; it != tickers.end(); ++it){
+    std::string tmp = (*it);
     try{
     char *tkr;
     tkr = (char *)malloc(tmp.size()+1);
@@ -48,11 +70,14 @@ tickers.push_back(t);
     free(tkr);
     kdb.json2kdb(item_name);
     done++;
-    std::cout<< "Done\t"<<tmp<<"\t"<<done<<"/"<<tickers.size()<<"\r\n";
+    std::cout<< "==========Done\t"<<tmp<<"\t"<<done<<"/"<<tickers.size()<<"\r\n";
   }catch(...){
-    std::cout<< "FAIL\t"<<tmp<<"\t"<<done<<"/"<<tickers.size()<<"\r\n";
+    std::cout<< "==========FAIL\t"<<tmp<<"\t"<<done<<"/"<<tickers.size()<<"\r\n";
     failedTickers.push_back(tmp);
   }
+  std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
+  std::cout << "Time difference = " << std::chrono::duration_cast<std::chrono::microseconds>(end - begin).count() << "[µs]" << std::endl;
+
 
 
   }
