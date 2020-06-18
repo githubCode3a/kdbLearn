@@ -6,7 +6,7 @@ This repository shows how to import JSON object (from [UniBit](https://unibit.ai
 
 ```clear && printf '\e[3J'; rm UniBit; g++ -DKXVER=3 -o -std=c++11 -o UniBit include/internal/*.cpp UniBit.cpp c.o -lpthread -lboost_system -lcrypto -lssl -lcpprest; ./UniBit >> log.log```
 
-This imports 3598 US stocks into kdb+ and save as ```{ticker}.csv``` files.
+This imports 3598 US stocks into kdb+ and save as ```{ticker}.csv``` files. Implementation is single-thread and requires 130s (if there is no credit limit on API accounts) or at least within 5 mins.
 
 Files can be found in ```quotes/{ticker}.csv```
 
