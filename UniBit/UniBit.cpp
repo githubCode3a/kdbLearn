@@ -42,7 +42,7 @@ tickers.push_back(t);
   std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
   std::vector<std::string>::iterator it = tickers.begin();
   for(; it != tickers.end(); ++it) {
-    if( 0== (*it).compare(std::string("OTEL") )){
+    if( 0== (*it).compare(std::string("QMCO") )){
       begin = std::chrono::steady_clock::now();
       done++; 
       it++;
