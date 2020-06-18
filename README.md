@@ -17,4 +17,6 @@ Prerequisites
 
 (1) You have to install ```nlohmann/json.hpp``` and ```cpprest``` (Microsoft).
 
-(2) Thanks [codyfeng](https://github.com/codyfeng/kdb-cpp) for a relatively complete Kdb interface.
+(2) platform is suggest to be Ubuntu (```sudo apt install  nlohmann-json3-dev libcpprest-dev```) instead of Mac OSX (although it has ```brew install nlohmann_json cpprestsdk```).
+
+(3) Thanks [codyfeng](https://github.com/codyfeng/kdb-cpp) for a relatively complete Kdb interface.
